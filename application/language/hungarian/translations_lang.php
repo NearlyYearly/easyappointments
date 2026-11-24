@@ -591,4 +591,6 @@ $lang['caldav_sync_failed_credentials'] = 'A CalDAV kiszolgáló elutasította a
 $lang['caldav_sync_failed_unreachable'] = 'A CalDAV kiszolgáló nem érhető el. Győződjön meg róla, hogy fut, és hogy a kapcsolódási cím helyes.';
 $lang['caldav_private_host_warning'] = 'Ez a kiszolgáló magánhálózaton található. A csatlakozáskor a gépneve bekerül az engedélyezett kapcsolódási címek közé.';
 $lang['caldav_allow_host_and_connect'] = 'Engedélyezés és csatlakozás';
+$lang['sort_order'] = 'Sort Order';
+$lang['sort_order_hint'] = 'Lower numbers are listed first on the booking page. Entries with the same number are sorted alphabetically.';
 // End

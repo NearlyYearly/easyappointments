@@ -5,6 +5,14 @@ developers to maintain and readjust their custom modifications on the main proje
 
 ## [Unreleased]
 
+### Added
+
+- Services and service categories now have a sort order, which sets the order they are listed in on the booking page; entries with the same sort order are listed alphabetically (#657, #1161)
+
+### Changed
+
+- Service categories are now listed alphabetically on the booking page, instead of in the order of their first service
+
 ### Fixed
 
 - Booking with the e-mail address of an existing customer no longer overwrites their stored name, phone number and address, which previously let anyone who knew the address change the customer's details; returning customers can still update them from the manage link of their own appointment

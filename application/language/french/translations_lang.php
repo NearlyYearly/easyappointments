@@ -591,4 +591,6 @@ $lang['caldav_sync_failed_credentials'] = 'Le serveur CalDAV a refusé le nom d\
 $lang['caldav_sync_failed_unreachable'] = 'Le serveur CalDAV n\'a pas pu être contacté. Vérifiez qu\'il fonctionne et que l\'URL de connexion est correcte.';
 $lang['caldav_private_host_warning'] = 'Ce serveur se trouve sur un réseau privé. La connexion ajoutera son hôte aux URL de connexion autorisées.';
 $lang['caldav_allow_host_and_connect'] = 'Autoriser et se connecter';
+$lang['sort_order'] = 'Sort Order';
+$lang['sort_order_hint'] = 'Lower numbers are listed first on the booking page. Entries with the same number are sorted alphabetically.';
 // End

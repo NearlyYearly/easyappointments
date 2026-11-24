@@ -2420,6 +2420,8 @@ components:
                     type: integer
                 attendantsNumber:
                     type: integer
+                sortOrder:
+                    type: integer
                 isPrivate:
                     type: boolean
                 serviceCategoryId:
@@ -2435,6 +2437,7 @@ components:
                 color: '#7cbae8'
                 slotInterval: 30
                 attendantsNumber: 1
+                sortOrder: 0
                 isPrivate: false
                 serviceCategoryId: null
         ServicePayload:
@@ -2458,6 +2461,8 @@ components:
                     type: integer
                 attendantsNumber:
                     type: integer
+                sortOrder:
+                    type: integer
                 isPrivate:
                     type: boolean
                 serviceCategoryId:
@@ -2472,6 +2477,7 @@ components:
                 color: '#7cbae8'
                 slotInterval: 30
                 attendantsNumber: 1
+                sortOrder: 0
                 isPrivate: false
                 serviceCategoryId: null
         ServiceCategoryRecord:
@@ -2483,10 +2489,13 @@ components:
                     type: string
                 description:
                     type: string
+                sortOrder:
+                    type: integer
             example:
                 id: 1
                 name: Test Category
                 description: This is a test category.
+                sortOrder: 0
         ServiceCategoryPayload:
             type: object
             properties:
@@ -2494,9 +2503,12 @@ components:
                     type: string
                 description:
                     type: string
+                sortOrder:
+                    type: integer
             example:
                 name: Test Category
                 description: This is a test category.
+                sortOrder: 0
         AdminRecord:
             type: object
             properties:

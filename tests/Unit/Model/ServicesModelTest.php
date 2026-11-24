@@ -86,4 +86,11 @@ class ServicesModelTest extends TestCase
 
         $this->assertTrue(true); // No exception thrown.
     }
+
+    public function testValidateThrowsWhenSortOrderIsNotAWholeNumber(): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+
+        $this->services_model()->validate(['name' => 'Haircut', 'sort_order' => '1.5', 'attendants_number' => 1]);
+    }
 }

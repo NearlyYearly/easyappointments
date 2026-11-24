@@ -591,4 +591,6 @@ $lang['caldav_sync_failed_credentials'] = 'CalDAV-palvelin hylkäsi käyttäjät
 $lang['caldav_sync_failed_unreachable'] = 'CalDAV-palvelimeen ei saatu yhteyttä. Varmista, että se on käynnissä ja että yhteysosoite on oikein.';
 $lang['caldav_private_host_warning'] = 'Tämä palvelin on yksityisessä verkossa. Yhdistäminen lisää sen isännän sallittuihin yhteysosoitteisiin.';
 $lang['caldav_allow_host_and_connect'] = 'Salli ja yhdistä';
+$lang['sort_order'] = 'Sort Order';
+$lang['sort_order_hint'] = 'Lower numbers are listed first on the booking page. Entries with the same number are sorted alphabetically.';
 // End

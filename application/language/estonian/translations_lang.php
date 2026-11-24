@@ -591,4 +591,6 @@ $lang['caldav_sync_failed_credentials'] = 'CalDAV server lükkas kasutajanime ja
 $lang['caldav_sync_failed_unreachable'] = 'CalDAV serverini ei õnnestunud ühendust saada. Veenduge, et see töötab ja et ühenduse aadress on õige.';
 $lang['caldav_private_host_warning'] = 'See server asub privaatvõrgus. Ühendamisel lisatakse selle host lubatud ühenduse aadressidele.';
 $lang['caldav_allow_host_and_connect'] = 'Luba ja ühenda';
+$lang['sort_order'] = 'Sort Order';
+$lang['sort_order_hint'] = 'Lower numbers are listed first on the booking page. Entries with the same number are sorted alphabetically.';
 // End

@@ -27,6 +27,7 @@ class Services_model extends EA_Model
         'id' => 'integer',
         'price' => 'float',
         'attendants_number' => 'integer',
+        'sort_order' => 'integer',
         'is_private' => 'boolean',
         'id_service_categories' => 'integer',
     ];
@@ -45,6 +46,7 @@ class Services_model extends EA_Model
         'color' => 'color',
         'slotInterval' => 'slot_interval',
         'attendantsNumber' => 'attendants_number',
+        'sortOrder' => 'sort_order',
         'isPrivate' => 'is_private',
         'serviceCategoryId' => 'id_service_categories',
     ];
@@ -133,6 +135,15 @@ class Services_model extends EA_Model
             (int) $service['slot_interval'] < 1
         ) {
             throw new InvalidArgumentException('The service slot interval must be at least 1 minute.');
+        }
+
+        // Make sure the sort order is a whole number.
+        if (
+            isset($service['sort_order']) &&
+            $service['sort_order'] !== '' &&
+            filter_var($service['sort_order'], FILTER_VALIDATE_INT) === false
+        ) {
+            throw new InvalidArgumentException('The provided sort order is invalid: ' . $service['sort_order']);
         }
 
         // Validate the attendants number value.
@@ -348,12 +359,15 @@ class Services_model extends EA_Model
         $services = $this->db
             ->distinct()
             ->select(
-                'services.*, service_categories.name AS service_category_name, service_categories.id AS service_category_id',
+                'services.*, service_categories.name AS service_category_name, service_categories.id AS service_category_id, ' .
+                    'service_categories.sort_order AS service_category_sort_order',
             )
             ->from('services')
             ->join('services_providers', 'services_providers.id_services = services.id', 'inner')
             ->join('service_categories', 'service_categories.id = services.id_service_categories', 'left')
-            ->order_by('name ASC')
+            ->order_by(
+                'service_categories.sort_order ASC, service_categories.name ASC, services.sort_order ASC, services.name ASC',
+            )
             ->get()
             ->result_array();
 
@@ -452,7 +466,12 @@ class Services_model extends EA_Model
             $this->db->where($where);
         }
 
-        $services = $this->db->select('id, name')->from('services')->order_by('name')->get()->result_array();
+        $services = $this->db
+            ->select('id, name')
+            ->from('services')
+            ->order_by('sort_order ASC, name ASC')
+            ->get()
+            ->result_array();
 
         $options = [];
 
@@ -511,6 +530,7 @@ class Services_model extends EA_Model
             'location' => $service['location'],
             'slotInterval' => (int) $service['slot_interval'],
             'attendantsNumber' => (int) $service['attendants_number'],
+            'sortOrder' => (int) ($service['sort_order'] ?? 0),
             'isPrivate' => (bool) $service['is_private'],
             'serviceCategoryId' =>
                 $service['id_service_categories'] !== null ? (int) $service['id_service_categories'] : null,
@@ -567,6 +587,10 @@ class Services_model extends EA_Model
 
         if (array_key_exists('attendantsNumber', $service)) {
             $decoded_resource['attendants_number'] = $service['attendantsNumber'];
+        }
+
+        if (array_key_exists('sortOrder', $service)) {
+            $decoded_resource['sort_order'] = $service['sortOrder'];
         }
 
         if (array_key_exists('serviceCategoryId', $service)) {

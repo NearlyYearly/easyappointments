@@ -25,6 +25,7 @@ class Service_categories_model extends EA_Model
      */
     protected array $casts = [
         'id' => 'integer',
+        'sort_order' => 'integer',
     ];
 
     /**
@@ -34,6 +35,7 @@ class Service_categories_model extends EA_Model
         'id' => 'id',
         'name' => 'name',
         'description' => 'description',
+        'sortOrder' => 'sort_order',
     ];
 
     /**
@@ -80,6 +82,17 @@ class Service_categories_model extends EA_Model
         if (empty($service_category['name'])) {
             throw new InvalidArgumentException(
                 'Not all required fields are provided: ' . print_r($service_category, true),
+            );
+        }
+
+        // Make sure the sort order is a whole number.
+        if (
+            isset($service_category['sort_order']) &&
+            $service_category['sort_order'] !== '' &&
+            filter_var($service_category['sort_order'], FILTER_VALIDATE_INT) === false
+        ) {
+            throw new InvalidArgumentException(
+                'The provided sort order is invalid: ' . $service_category['sort_order'],
             );
         }
     }
@@ -262,7 +275,7 @@ class Service_categories_model extends EA_Model
         $service_categories = $this->db
             ->select('id, name')
             ->from('service_categories')
-            ->order_by('name')
+            ->order_by('sort_order ASC, name ASC')
             ->get()
             ->result_array();
 
@@ -337,6 +350,7 @@ class Service_categories_model extends EA_Model
             'description' => array_key_exists('description', $service_category)
                 ? $service_category['description']
                 : null,
+            'sortOrder' => (int) ($service_category['sort_order'] ?? 0),
         ];
 
         $service_category = $encoded_resource;
@@ -362,6 +376,10 @@ class Service_categories_model extends EA_Model
 
         if (array_key_exists('description', $service_category)) {
             $decoded_resource['description'] = $service_category['description'];
+        }
+
+        if (array_key_exists('sortOrder', $service_category)) {
+            $decoded_resource['sort_order'] = $service_category['sortOrder'];
         }
 
         $service_category = $decoded_resource;

@@ -591,4 +591,6 @@ $lang['caldav_sync_failed_credentials'] = 'Serverul CalDAV a respins numele de u
 $lang['caldav_sync_failed_unreachable'] = 'Serverul CalDAV nu a putut fi contactat. Asigurați-vă că funcționează și că adresa de conectare este corectă.';
 $lang['caldav_private_host_warning'] = 'Acest server se află într-o rețea privată. La conectare, gazda sa va fi adăugată la adresele de conectare permise.';
 $lang['caldav_allow_host_and_connect'] = 'Permite și conectează';
+$lang['sort_order'] = 'Sort Order';
+$lang['sort_order_hint'] = 'Lower numbers are listed first on the booking page. Entries with the same number are sorted alphabetically.';
 // End

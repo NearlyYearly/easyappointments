@@ -591,4 +591,6 @@ $lang['caldav_sync_failed_credentials'] = 'De CalDAV-Server huet de Benotzernumm
 $lang['caldav_sync_failed_unreachable'] = 'De CalDAV-Server konnt net erreecht ginn. Vergewëssert Iech, datt en leeft an datt d\'Verbindungs-URL richteg ass.';
 $lang['caldav_private_host_warning'] = 'Dëse Server ass an engem private Netz. Beim Verbanne gëtt säin Host bei déi erlaabte Verbindungs-URLen derbäigesat.';
 $lang['caldav_allow_host_and_connect'] = 'Zouloossen a verbannen';
+$lang['sort_order'] = 'Sort Order';
+$lang['sort_order_hint'] = 'Lower numbers are listed first on the booking page. Entries with the same number are sorted alphabetically.';
 // End

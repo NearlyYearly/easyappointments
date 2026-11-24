@@ -79,6 +79,16 @@
                 <textarea id="description" rows="4" class="form-control" disabled></textarea>
             </div>
 
+            <div class="mb-3">
+                <label class="form-label" for="sort-order">
+                    <?= lang('sort_order') ?>
+                </label>
+                <input id="sort-order" class="form-control" type="number" step="1" disabled>
+                <div class="form-text text-muted">
+                    <small><?= lang('sort_order_hint') ?></small>
+                </div>
+            </div>
+
         </div>
     </div>
 

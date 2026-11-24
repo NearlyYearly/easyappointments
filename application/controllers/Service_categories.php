@@ -20,7 +20,7 @@
  */
 class Service_categories extends EA_Controller
 {
-    public array $allowed_service_category_fields = ['id', 'name', 'description'];
+    public array $allowed_service_category_fields = ['id', 'name', 'description', 'sort_order'];
 
     public array $optional_service_category_fields = [];
 

@@ -591,4 +591,6 @@ $lang['caldav_sync_failed_credentials'] = 'CalDAV sunucusu kullanıcı adını v
 $lang['caldav_sync_failed_unreachable'] = 'CalDAV sunucusuna ulaşılamadı. Sunucunun çalıştığından ve bağlantı adresinin doğru olduğundan emin olun.';
 $lang['caldav_private_host_warning'] = 'Bu sunucu özel bir ağda bulunuyor. Bağlandığınızda adresi izin verilen bağlantı adreslerine eklenecek.';
 $lang['caldav_allow_host_and_connect'] = 'İzin ver ve bağlan';
+$lang['sort_order'] = 'Sort Order';
+$lang['sort_order_hint'] = 'Lower numbers are listed first on the booking page. Entries with the same number are sorted alphabetically.';
 // End

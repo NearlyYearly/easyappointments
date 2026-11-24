@@ -591,4 +591,6 @@ $lang['caldav_sync_failed_credentials'] = 'Server CalDAV odmítl uživatelské j
 $lang['caldav_sync_failed_unreachable'] = 'Server CalDAV se nepodařilo kontaktovat. Ověřte, že běží a že je adresa připojení správná.';
 $lang['caldav_private_host_warning'] = 'Tento server je v privátní síti. Připojením se jeho hostitel přidá mezi povolené adresy připojení.';
 $lang['caldav_allow_host_and_connect'] = 'Povolit a připojit';
+$lang['sort_order'] = 'Sort Order';
+$lang['sort_order_hint'] = 'Lower numbers are listed first on the booking page. Entries with the same number are sorted alphabetically.';
 // End

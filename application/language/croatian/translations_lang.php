@@ -591,4 +591,6 @@ $lang['caldav_sync_failed_credentials'] = 'Poslužitelj CalDAV odbio je korisni�
 $lang['caldav_sync_failed_unreachable'] = 'Poslužitelj CalDAV nije bilo moguće dohvatiti. Provjerite radi li i je li adresa povezivanja ispravna.';
 $lang['caldav_private_host_warning'] = 'Ovaj poslužitelj je u privatnoj mreži. Povezivanjem će se njegov naziv dodati u dopuštene adrese povezivanja.';
 $lang['caldav_allow_host_and_connect'] = 'Dopusti i poveži';
+$lang['sort_order'] = 'Sort Order';
+$lang['sort_order_hint'] = 'Lower numbers are listed first on the booking page. Entries with the same number are sorted alphabetically.';
 // End

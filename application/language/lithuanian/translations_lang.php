@@ -591,4 +591,6 @@ $lang['caldav_sync_failed_credentials'] = 'CalDAV serveris atmetė naudotojo var
 $lang['caldav_sync_failed_unreachable'] = 'Nepavyko susisiekti su CalDAV serveriu. Įsitikinkite, kad jis veikia ir kad prisijungimo adresas teisingas.';
 $lang['caldav_private_host_warning'] = 'Šis serveris yra privačiame tinkle. Prisijungus jo serverio vardas bus pridėtas prie leidžiamų prisijungimo adresų.';
 $lang['caldav_allow_host_and_connect'] = 'Leisti ir prisijungti';
+$lang['sort_order'] = 'Sort Order';
+$lang['sort_order_hint'] = 'Lower numbers are listed first on the booking page. Entries with the same number are sorted alphabetically.';
 // End

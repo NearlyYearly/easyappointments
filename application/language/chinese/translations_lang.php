@@ -591,4 +591,6 @@ $lang['caldav_sync_failed_credentials'] = 'CalDAV 服务器拒绝了用户名和
 $lang['caldav_sync_failed_unreachable'] = '无法连接到 CalDAV 服务器。请确认服务器正在运行，并且连接网址正确。';
 $lang['caldav_private_host_warning'] = '此服务器位于专用网络中。连接后会将其主机添加到允许的连接网址中。';
 $lang['caldav_allow_host_and_connect'] = '允许并连接';
+$lang['sort_order'] = 'Sort Order';
+$lang['sort_order_hint'] = 'Lower numbers are listed first on the booking page. Entries with the same number are sorted alphabetically.';
 // End

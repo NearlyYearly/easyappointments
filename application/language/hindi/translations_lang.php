@@ -591,4 +591,6 @@ $lang['caldav_sync_failed_credentials'] = 'CalDAV सर्वर ने उप�
 $lang['caldav_sync_failed_unreachable'] = 'CalDAV सर्वर तक नहीं पहुँचा जा सका। सुनिश्चित करें कि वह चल रहा है और कनेक्शन URL सही है।';
 $lang['caldav_private_host_warning'] = 'यह सर्वर एक निजी नेटवर्क पर है। कनेक्ट करने पर इसका होस्ट अनुमत कनेक्शन URL में जोड़ दिया जाएगा।';
 $lang['caldav_allow_host_and_connect'] = 'अनुमति दें और कनेक्ट करें';
+$lang['sort_order'] = 'Sort Order';
+$lang['sort_order_hint'] = 'Lower numbers are listed first on the booking page. Entries with the same number are sorted alphabetically.';
 // End

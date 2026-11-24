@@ -591,4 +591,6 @@ $lang['caldav_sync_failed_credentials'] = 'Ο διακομιστής CalDAV απ
 $lang['caldav_sync_failed_unreachable'] = 'Δεν ήταν δυνατή η επικοινωνία με τον διακομιστή CalDAV. Βεβαιωθείτε ότι λειτουργεί και ότι η διεύθυνση σύνδεσης είναι σωστή.';
 $lang['caldav_private_host_warning'] = 'Αυτός ο διακομιστής βρίσκεται σε ιδιωτικό δίκτυο. Με τη σύνδεση θα προστεθεί στις επιτρεπόμενες διευθύνσεις σύνδεσης.';
 $lang['caldav_allow_host_and_connect'] = 'Να επιτραπεί και σύνδεση';
+$lang['sort_order'] = 'Sort Order';
+$lang['sort_order_hint'] = 'Lower numbers are listed first on the booking page. Entries with the same number are sorted alphabetically.';
 // End

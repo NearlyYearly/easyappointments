@@ -20,6 +20,7 @@ App.Pages.ServiceCategories = (function () {
     const $id = $('#id');
     const $name = $('#name');
     const $description = $('#description');
+    const $sortOrder = $('#sort-order');
     let filterResults = {};
     let filterLimit = 20;
 
@@ -135,6 +136,7 @@ App.Pages.ServiceCategories = (function () {
             const serviceCategory = {
                 name: $name.val(),
                 description: $description.val(),
+                sort_order: $sortOrder.val() || 0,
             };
 
             if ($id.val() !== '') {
@@ -243,6 +245,7 @@ App.Pages.ServiceCategories = (function () {
         $id.val(serviceCategory.id);
         $name.val(serviceCategory.name);
         $description.val(serviceCategory.description);
+        $sortOrder.val(serviceCategory.sort_order);
     }
 
     /**

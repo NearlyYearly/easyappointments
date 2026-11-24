@@ -591,4 +591,6 @@ $lang['caldav_sync_failed_credentials'] = 'CalDAV-serveren afviste brugernavnet 
 $lang['caldav_sync_failed_unreachable'] = 'CalDAV-serveren kunne ikke nås. Kontroller, at den kører, og at forbindelses-URL\'en er korrekt.';
 $lang['caldav_private_host_warning'] = 'Denne server er på et privat netværk. Ved at oprette forbindelse tilføjes dens vært til de tilladte forbindelses-URL\'er.';
 $lang['caldav_allow_host_and_connect'] = 'Tillad og opret forbindelse';
+$lang['sort_order'] = 'Sort Order';
+$lang['sort_order_hint'] = 'Lower numbers are listed first on the booking page. Entries with the same number are sorted alphabetically.';
 // End
