@@ -33,6 +33,34 @@ App.Pages.BlockedPeriods = (function () {
      */
     function addEventListeners() {
         /**
+         * Event: ICS Import File "Change"
+         *
+         * Imports the events of the selected iCalendar file, system-wide or for the selected provider.
+         */
+        $('#ics-import-file').on('change', (event) => {
+            const file = event.target.files[0];
+
+            if (!file) {
+                return;
+            }
+
+            file.text().then((ics) => {
+                App.Http.BlockedPeriods.importIcs(ics, $('#ics-import-target').val())
+                    .done((response) => {
+                        App.Layouts.Backend.displayNotification(
+                            lang('ics_import_result')
+                                .replace('{$created}', response.created)
+                                .replace('{$skipped}', response.skipped),
+                        );
+                        App.Pages.BlockedPeriods.filter($('#filter-blocked-periods .key').val());
+                    })
+                    .always(() => {
+                        event.target.value = ''; // Allow importing the same file again.
+                    });
+            });
+        });
+
+        /**
          * Event: Filter Blocked Periods Form "Submit"
          *
          * @param {jQuery.Event} event

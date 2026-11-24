@@ -34,9 +34,13 @@ class Blocked_periods extends EA_Controller
         parent::__construct();
 
         $this->load->model('blocked_periods_model');
+        $this->load->model('providers_model');
         $this->load->model('roles_model');
+        $this->load->model('unavailabilities_model');
 
         $this->load->library('accounts');
+        $this->load->library('ics_import');
+        $this->load->library('synchronization');
         $this->load->library('timezones');
         $this->load->library('webhooks_client');
     }
@@ -81,6 +85,9 @@ class Blocked_periods extends EA_Controller
             'user_display_name' => $this->accounts->get_user_display_name($user_id),
             'timezones' => $this->timezones->to_array(),
             'privileges' => $this->roles_model->get_permissions_by_slug($role_slug),
+            'providers' => can('add', PRIV_APPOINTMENTS)
+                ? $this->providers_model->get(null, null, null, 'first_name ASC, last_name ASC')
+                : [],
         ]);
 
         $this->load->view('pages/blocked_periods');
@@ -155,8 +162,97 @@ class Blocked_periods extends EA_Controller
     }
 
     /**
-     * Find a service-category.
+     * Import the events of an iCalendar file as blocked periods (system-wide) or provider unavailabilities.
      */
+    public function import(): void
+    {
+        try {
+            method('post');
+
+            if (cannot('add', PRIV_BLOCKED_PERIODS)) {
+                abort(403, 'Forbidden');
+            }
+
+            check('ics', 'string');
+            check('provider_id', 'numeric|null');
+
+            $provider_id = (int) request('provider_id') ?: null;
+
+            if ($provider_id) {
+                // Per provider periods are stored as unavailabilities, which have their own permission.
+                if (cannot('add', PRIV_APPOINTMENTS)) {
+                    abort(403, 'Forbidden');
+                }
+
+                authorize_event_write(null, $provider_id);
+
+                $provider = $this->providers_model->find($provider_id);
+            }
+
+            $timezone = new DateTimeZone($provider['timezone'] ?? setting('default_timezone', 'UTC'));
+
+            // ponytail: fixed import window, recurring events are expanded up to two years ahead.
+            $from = new DateTime('today', $timezone);
+            $to = (clone $from)->modify('+2 years');
+
+            $periods = $this->ics_import->parse((string) request('ics'), $timezone, $from, $to);
+
+            $created = 0;
+
+            foreach ($periods as $period) {
+                $period['name'] = $period['name'] ?: lang('blocked_period');
+
+                $unique = [
+                    'start_datetime' => $period['start_datetime'],
+                    'end_datetime' => $period['end_datetime'],
+                ];
+
+                // Importing the same file again must not create duplicates.
+                if (!$provider_id) {
+                    if ($this->blocked_periods_model->get($unique + ['name' => $period['name']])) {
+                        continue;
+                    }
+
+                    $blocked_period_id = $this->blocked_periods_model->save($period);
+
+                    $this->webhooks_client->trigger(
+                        WEBHOOK_BLOCKED_PERIOD_SAVE,
+                        $this->blocked_periods_model->find($blocked_period_id),
+                    );
+                } else {
+                    if ($this->unavailabilities_model->get($unique + ['id_users_provider' => $provider_id])) {
+                        continue;
+                    }
+
+                    $unavailability_id = $this->unavailabilities_model->save([
+                        'id_users_provider' => $provider_id,
+                        'start_datetime' => $period['start_datetime'],
+                        'end_datetime' => $period['end_datetime'],
+                        'notes' => trim($period['name'] . PHP_EOL . $period['notes']),
+                    ]);
+
+                    $unavailability = $this->unavailabilities_model->find($unavailability_id);
+
+                    $this->synchronization->sync_unavailability_saved($unavailability, $provider);
+
+                    $this->webhooks_client->trigger(WEBHOOK_UNAVAILABILITY_SAVE, $unavailability);
+                }
+
+                $created++;
+            }
+
+            json_response([
+                'success' => true,
+                'created' => $created,
+                'skipped' => count($periods) - $created,
+            ]);
+        } catch (Throwable $e) {
+            json_exception($e);
+        }
+    }
+
+    /**
+     * Find a service-category.
     public function find(): void
     {
         try {

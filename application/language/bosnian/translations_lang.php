@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'Server CalDAV je odbio korisničko im
 $lang['caldav_sync_failed_unreachable'] = 'Server CalDAV nije bilo moguće kontaktirati. Provjerite radi li i je li adresa povezivanja ispravna.';
 $lang['caldav_private_host_warning'] = 'Ovaj server je u privatnoj mreži. Povezivanjem će se njegov naziv dodati u dozvoljene adrese povezivanja.';
 $lang['caldav_allow_host_and_connect'] = 'Dozvoli i poveži';
+$lang['import_ics'] = 'Import .ics';
+$lang['import_ics_hint'] = 'Create blocked periods from the events of an iCalendar file, e.g. public holidays or a vacation calendar.';
+$lang['import_ics_target'] = 'Import for';
+$lang['system_wide'] = 'System-wide';
+$lang['ics_import_result'] = '{$created} periods imported, {$skipped} already existed.';
 // End

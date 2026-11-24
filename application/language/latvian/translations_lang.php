@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'CalDAV serveris noraidīja lietotājv
 $lang['caldav_sync_failed_unreachable'] = 'Neizdevās sazināties ar CalDAV serveri. Pārliecinieties, ka tas darbojas un ka savienojuma adrese ir pareiza.';
 $lang['caldav_private_host_warning'] = 'Šis serveris atrodas privātā tīklā. Pieslēdzoties tā resursdators tiks pievienots atļautajām savienojuma adresēm.';
 $lang['caldav_allow_host_and_connect'] = 'Atļaut un pieslēgties';
+$lang['import_ics'] = 'Import .ics';
+$lang['import_ics_hint'] = 'Create blocked periods from the events of an iCalendar file, e.g. public holidays or a vacation calendar.';
+$lang['import_ics_target'] = 'Import for';
+$lang['system_wide'] = 'System-wide';
+$lang['ics_import_result'] = '{$created} periods imported, {$skipped} already existed.';
 // End

@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'رفض خادم CalDAV اسم الم�
 $lang['caldav_sync_failed_unreachable'] = 'تعذر الوصول إلى خادم CalDAV. تأكد من أنه يعمل وأن عنوان الاتصال صحيح.';
 $lang['caldav_private_host_warning'] = 'هذا الخادم على شبكة خاصة. سيؤدي الاتصال إلى إضافة مضيفه إلى عناوين الاتصال المسموح بها.';
 $lang['caldav_allow_host_and_connect'] = 'السماح والاتصال';
+$lang['import_ics'] = 'Import .ics';
+$lang['import_ics_hint'] = 'Create blocked periods from the events of an iCalendar file, e.g. public holidays or a vacation calendar.';
+$lang['import_ics_target'] = 'Import for';
+$lang['system_wide'] = 'System-wide';
+$lang['ics_import_result'] = '{$created} periods imported, {$skipped} already existed.';
 // End

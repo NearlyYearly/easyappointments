@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'CalDAV सर्वर ने उप�
 $lang['caldav_sync_failed_unreachable'] = 'CalDAV सर्वर तक नहीं पहुँचा जा सका। सुनिश्चित करें कि वह चल रहा है और कनेक्शन URL सही है।';
 $lang['caldav_private_host_warning'] = 'यह सर्वर एक निजी नेटवर्क पर है। कनेक्ट करने पर इसका होस्ट अनुमत कनेक्शन URL में जोड़ दिया जाएगा।';
 $lang['caldav_allow_host_and_connect'] = 'अनुमति दें और कनेक्ट करें';
+$lang['import_ics'] = 'Import .ics';
+$lang['import_ics_hint'] = 'Create blocked periods from the events of an iCalendar file, e.g. public holidays or a vacation calendar.';
+$lang['import_ics_target'] = 'Import for';
+$lang['system_wide'] = 'System-wide';
+$lang['ics_import_result'] = '{$created} periods imported, {$skipped} already existed.';
 // End

@@ -27,6 +27,26 @@ App.Http.BlockedPeriods = (function () {
     }
 
     /**
+     * Import the events of an iCalendar file.
+     *
+     * @param {String} ics Contents of the iCalendar file.
+     * @param {Number|String} [providerId] Import as unavailabilities of this provider, instead of blocked periods.
+     *
+     * @return {Object}
+     */
+    function importIcs(ics, providerId) {
+        const url = App.Utils.Url.siteUrl('blocked_periods/import');
+
+        const data = {
+            csrf_token: vars('csrf_token'),
+            ics,
+            provider_id: providerId || null,
+        };
+
+        return $.post(url, data);
+    }
+
+    /**
      * Create a blocked-period.
      *
      * @param {Object} blockedPeriod
@@ -124,6 +144,7 @@ App.Http.BlockedPeriods = (function () {
 
     return {
         save,
+        importIcs,
         store,
         update,
         destroy,

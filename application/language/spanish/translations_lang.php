@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'El servidor CalDAV rechazó el nombre
 $lang['caldav_sync_failed_unreachable'] = 'No se pudo contactar con el servidor CalDAV. Asegúrese de que está en funcionamiento y de que la URL de conexión es correcta.';
 $lang['caldav_private_host_warning'] = 'Este servidor está en una red privada. Al conectar se añadirá su host a las URL de conexión permitidas.';
 $lang['caldav_allow_host_and_connect'] = 'Permitir y conectar';
+$lang['import_ics'] = 'Import .ics';
+$lang['import_ics_hint'] = 'Create blocked periods from the events of an iCalendar file, e.g. public holidays or a vacation calendar.';
+$lang['import_ics_target'] = 'Import for';
+$lang['system_wide'] = 'System-wide';
+$lang['ics_import_result'] = '{$created} periods imported, {$skipped} already existed.';
 // End

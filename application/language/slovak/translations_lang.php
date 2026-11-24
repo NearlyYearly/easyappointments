@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'Server CalDAV odmietol používateľs
 $lang['caldav_sync_failed_unreachable'] = 'Server CalDAV sa nepodarilo kontaktovať. Skontrolujte, či beží a či je adresa pripojenia správna.';
 $lang['caldav_private_host_warning'] = 'Tento server je v súkromnej sieti. Pripojením sa jeho hostiteľ pridá medzi povolené adresy pripojenia.';
 $lang['caldav_allow_host_and_connect'] = 'Povoliť a pripojiť';
+$lang['import_ics'] = 'Import .ics';
+$lang['import_ics_hint'] = 'Create blocked periods from the events of an iCalendar file, e.g. public holidays or a vacation calendar.';
+$lang['import_ics_target'] = 'Import for';
+$lang['system_wide'] = 'System-wide';
+$lang['ics_import_result'] = '{$created} periods imported, {$skipped} already existed.';
 // End

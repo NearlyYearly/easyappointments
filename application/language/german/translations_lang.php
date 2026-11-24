@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'Der CalDAV-Server hat den Benutzernam
 $lang['caldav_sync_failed_unreachable'] = 'Der CalDAV-Server konnte nicht erreicht werden. Stellen Sie sicher, dass er läuft und dass die Verbindungs-URL korrekt ist.';
 $lang['caldav_private_host_warning'] = 'Dieser Server befindet sich in einem privaten Netzwerk. Beim Verbinden wird sein Host zu den erlaubten Verbindungs-URLs hinzugefügt.';
 $lang['caldav_allow_host_and_connect'] = 'Zulassen und verbinden';
+$lang['import_ics'] = '.ics importieren';
+$lang['import_ics_hint'] = 'Gesperrte Zeiträume aus den Terminen einer iCalendar-Datei anlegen, z. B. Feiertage oder ein Urlaubskalender.';
+$lang['import_ics_target'] = 'Importieren für';
+$lang['system_wide'] = 'Systemweit';
+$lang['ics_import_result'] = '{$created} Zeiträume importiert, {$skipped} waren bereits vorhanden.';
 // End

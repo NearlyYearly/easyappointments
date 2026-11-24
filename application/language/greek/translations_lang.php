@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'Ο διακομιστής CalDAV απ
 $lang['caldav_sync_failed_unreachable'] = 'Δεν ήταν δυνατή η επικοινωνία με τον διακομιστή CalDAV. Βεβαιωθείτε ότι λειτουργεί και ότι η διεύθυνση σύνδεσης είναι σωστή.';
 $lang['caldav_private_host_warning'] = 'Αυτός ο διακομιστής βρίσκεται σε ιδιωτικό δίκτυο. Με τη σύνδεση θα προστεθεί στις επιτρεπόμενες διευθύνσεις σύνδεσης.';
 $lang['caldav_allow_host_and_connect'] = 'Να επιτραπεί και σύνδεση';
+$lang['import_ics'] = 'Import .ics';
+$lang['import_ics_hint'] = 'Create blocked periods from the events of an iCalendar file, e.g. public holidays or a vacation calendar.';
+$lang['import_ics_target'] = 'Import for';
+$lang['system_wide'] = 'System-wide';
+$lang['ics_import_result'] = '{$created} periods imported, {$skipped} already existed.';
 // End

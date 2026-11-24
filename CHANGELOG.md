@@ -5,6 +5,10 @@ developers to maintain and readjust their custom modifications on the main proje
 
 ## [Unreleased]
 
+### Added
+
+- Blocked periods can now be imported from an iCalendar (.ics) file, either system-wide (e.g. public holidays) or as unavailabilities of a single provider (e.g. a vacation calendar) (#552)
+
 ### Fixed
 
 - Booking with the e-mail address of an existing customer no longer overwrites their stored name, phone number and address, which previously let anyone who knew the address change the customer's details; returning customers can still update them from the manage link of their own appointment

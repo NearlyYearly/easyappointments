@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'CalDAV-palvelin hylkäsi käyttäjät
 $lang['caldav_sync_failed_unreachable'] = 'CalDAV-palvelimeen ei saatu yhteyttä. Varmista, että se on käynnissä ja että yhteysosoite on oikein.';
 $lang['caldav_private_host_warning'] = 'Tämä palvelin on yksityisessä verkossa. Yhdistäminen lisää sen isännän sallittuihin yhteysosoitteisiin.';
 $lang['caldav_allow_host_and_connect'] = 'Salli ja yhdistä';
+$lang['import_ics'] = 'Import .ics';
+$lang['import_ics_hint'] = 'Create blocked periods from the events of an iCalendar file, e.g. public holidays or a vacation calendar.';
+$lang['import_ics_target'] = 'Import for';
+$lang['system_wide'] = 'System-wide';
+$lang['ics_import_result'] = '{$created} periods imported, {$skipped} already existed.';
 // End

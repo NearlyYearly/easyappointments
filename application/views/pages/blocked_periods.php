@@ -17,6 +17,23 @@
                 </button>
             </div>
 
+            <div class="input-group mb-4">
+                <select id="ics-import-target" class="form-select" aria-label="<?= lang('import_ics_target') ?>">
+                    <option value=""><?= lang('system_wide') ?></option>
+                    <?php foreach (vars('providers') as $provider): ?>
+                        <option value="<?= (int) $provider['id'] ?>">
+                            <?= e($provider['first_name'] . ' ' . $provider['last_name']) ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+                <label class="btn btn-outline-primary" for="ics-import-file"
+                       data-tippy-content="<?= lang('import_ics_hint') ?>">
+                    <i class="fas fa-file-import me-2"></i>
+                    <?= lang('import_ics') ?>
+                </label>
+                <input id="ics-import-file" type="file" accept=".ics,text/calendar" hidden>
+            </div>
+
             <form class="input-append mb-4">
                 <div class="input-group">
                     <input type="text" class="key form-control" aria-label="keyword">
