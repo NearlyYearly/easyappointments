@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'CalDAV-serveren afviste brugernavnet 
 $lang['caldav_sync_failed_unreachable'] = 'CalDAV-serveren kunne ikke nås. Kontroller, at den kører, og at forbindelses-URL\'en er korrekt.';
 $lang['caldav_private_host_warning'] = 'Denne server er på et privat netværk. Ved at oprette forbindelse tilføjes dens vært til de tilladte forbindelses-URL\'er.';
 $lang['caldav_allow_host_and_connect'] = 'Tillad og opret forbindelse';
+$lang['buffer_before'] = 'Buffer Before (Minutes)';
+$lang['buffer_after'] = 'Buffer After (Minutes)';
+$lang['buffer_before_hint'] = 'Time that must stay free before an appointment of this service, e.g. for preparation.';
+$lang['buffer_after_hint'] = 'Time that must stay free after an appointment of this service, e.g. for cleaning or travel.';
+$lang['invalid_buffer'] = 'The buffer cannot be negative.';
 // End

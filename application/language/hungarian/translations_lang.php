@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'A CalDAV kiszolgáló elutasította a
 $lang['caldav_sync_failed_unreachable'] = 'A CalDAV kiszolgáló nem érhető el. Győződjön meg róla, hogy fut, és hogy a kapcsolódási cím helyes.';
 $lang['caldav_private_host_warning'] = 'Ez a kiszolgáló magánhálózaton található. A csatlakozáskor a gépneve bekerül az engedélyezett kapcsolódási címek közé.';
 $lang['caldav_allow_host_and_connect'] = 'Engedélyezés és csatlakozás';
+$lang['buffer_before'] = 'Buffer Before (Minutes)';
+$lang['buffer_after'] = 'Buffer After (Minutes)';
+$lang['buffer_before_hint'] = 'Time that must stay free before an appointment of this service, e.g. for preparation.';
+$lang['buffer_after_hint'] = 'Time that must stay free after an appointment of this service, e.g. for cleaning or travel.';
+$lang['invalid_buffer'] = 'The buffer cannot be negative.';
 // End

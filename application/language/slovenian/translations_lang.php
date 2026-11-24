@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'Stre탑nik CalDAV je zavrnil uporabni�
 $lang['caldav_sync_failed_unreachable'] = 'Stre탑nika CalDAV ni bilo mogo훾e dose훾i. Preverite, ali deluje in ali je naslov povezave pravilen.';
 $lang['caldav_private_host_warning'] = 'Ta stre탑nik je v zasebnem omre탑ju. S povezavo bo njegov gostitelj dodan med dovoljene naslove povezave.';
 $lang['caldav_allow_host_and_connect'] = 'Dovoli in pove탑i';
+$lang['buffer_before'] = 'Buffer Before (Minutes)';
+$lang['buffer_after'] = 'Buffer After (Minutes)';
+$lang['buffer_before_hint'] = 'Time that must stay free before an appointment of this service, e.g. for preparation.';
+$lang['buffer_after_hint'] = 'Time that must stay free after an appointment of this service, e.g. for cleaning or travel.';
+$lang['invalid_buffer'] = 'The buffer cannot be negative.';
 // End

@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'Serverul CalDAV a respins numele de u
 $lang['caldav_sync_failed_unreachable'] = 'Serverul CalDAV nu a putut fi contactat. Asigurați-vă că funcționează și că adresa de conectare este corectă.';
 $lang['caldav_private_host_warning'] = 'Acest server se află într-o rețea privată. La conectare, gazda sa va fi adăugată la adresele de conectare permise.';
 $lang['caldav_allow_host_and_connect'] = 'Permite și conectează';
+$lang['buffer_before'] = 'Buffer Before (Minutes)';
+$lang['buffer_after'] = 'Buffer After (Minutes)';
+$lang['buffer_before_hint'] = 'Time that must stay free before an appointment of this service, e.g. for preparation.';
+$lang['buffer_after_hint'] = 'Time that must stay free after an appointment of this service, e.g. for cleaning or travel.';
+$lang['invalid_buffer'] = 'The buffer cannot be negative.';
 // End

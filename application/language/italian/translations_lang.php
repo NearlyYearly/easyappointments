@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'Il server CalDAV ha rifiutato il nome
 $lang['caldav_sync_failed_unreachable'] = 'Non è stato possibile raggiungere il server CalDAV. Verifica che sia in funzione e che l\'URL di connessione sia corretto.';
 $lang['caldav_private_host_warning'] = 'Questo server si trova in una rete privata. Connettendosi, il suo host verrà aggiunto agli URL di connessione consentiti.';
 $lang['caldav_allow_host_and_connect'] = 'Consenti e connetti';
+$lang['buffer_before'] = 'Buffer Before (Minutes)';
+$lang['buffer_after'] = 'Buffer After (Minutes)';
+$lang['buffer_before_hint'] = 'Time that must stay free before an appointment of this service, e.g. for preparation.';
+$lang['buffer_after_hint'] = 'Time that must stay free after an appointment of this service, e.g. for cleaning or travel.';
+$lang['invalid_buffer'] = 'The buffer cannot be negative.';
 // End

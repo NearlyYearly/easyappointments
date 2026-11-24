@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'CalDAV-palvelin hylkäsi käyttäjät
 $lang['caldav_sync_failed_unreachable'] = 'CalDAV-palvelimeen ei saatu yhteyttä. Varmista, että se on käynnissä ja että yhteysosoite on oikein.';
 $lang['caldav_private_host_warning'] = 'Tämä palvelin on yksityisessä verkossa. Yhdistäminen lisää sen isännän sallittuihin yhteysosoitteisiin.';
 $lang['caldav_allow_host_and_connect'] = 'Salli ja yhdistä';
+$lang['buffer_before'] = 'Buffer Before (Minutes)';
+$lang['buffer_after'] = 'Buffer After (Minutes)';
+$lang['buffer_before_hint'] = 'Time that must stay free before an appointment of this service, e.g. for preparation.';
+$lang['buffer_after_hint'] = 'Time that must stay free after an appointment of this service, e.g. for cleaning or travel.';
+$lang['invalid_buffer'] = 'The buffer cannot be negative.';
 // End

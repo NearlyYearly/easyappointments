@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'שרת ה-CalDAV דחה את שם ה�
 $lang['caldav_sync_failed_unreachable'] = 'לא ניתן היה להגיע לשרת ה-CalDAV. ודאו שהוא פועל ושכתובת החיבור נכונה.';
 $lang['caldav_private_host_warning'] = 'שרת זה נמצא ברשת פרטית. ההתחברות תוסיף את המארח שלו לכתובות החיבור המותרות.';
 $lang['caldav_allow_host_and_connect'] = 'אפשר והתחבר';
+$lang['buffer_before'] = 'Buffer Before (Minutes)';
+$lang['buffer_after'] = 'Buffer After (Minutes)';
+$lang['buffer_before_hint'] = 'Time that must stay free before an appointment of this service, e.g. for preparation.';
+$lang['buffer_after_hint'] = 'Time that must stay free after an appointment of this service, e.g. for cleaning or travel.';
+$lang['invalid_buffer'] = 'The buffer cannot be negative.';
 // End

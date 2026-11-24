@@ -437,16 +437,32 @@ class Appointments_model extends EA_Model
         ?int $exclude_appointment_id = null,
     ): int {
         if ($exclude_appointment_id) {
-            $this->db->where('id !=', $exclude_appointment_id);
+            $this->db->where('appointments.id !=', $exclude_appointment_id);
         }
+
+        // The raw conditions below are not prefixed by the query builder.
+        $appointments = $this->db->dbprefix('appointments');
+        $services = $this->db->dbprefix('services');
 
         $result = $this->db
             ->select('count(*) AS attendants_number')
             ->from('appointments')
-            // Any overlap counts, including an appointment that lies entirely within the period.
-            ->where('start_datetime <', $end->format('Y-m-d H:i:s'))
-            ->where('end_datetime >', $start->format('Y-m-d H:i:s'))
-            ->where('id_services !=', $service_id)
+            ->join('services', 'services.id = appointments.id_services', 'left')
+            // Any overlap counts, including an appointment that lies entirely within the period. The buffers of the
+            // other service count as taken time too.
+            ->where(
+                "DATE_SUB($appointments.start_datetime, INTERVAL COALESCE($services.buffer_before, 0) MINUTE) < " .
+                    $this->db->escape($end->format('Y-m-d H:i:s')),
+                null,
+                false,
+            )
+            ->where(
+                "DATE_ADD($appointments.end_datetime, INTERVAL COALESCE($services.buffer_after, 0) MINUTE) > " .
+                    $this->db->escape($start->format('Y-m-d H:i:s')),
+                null,
+                false,
+            )
+            ->where('appointments.id_services !=', $service_id)
             ->where('id_users_provider', $provider_id)
             ->get()
             ->row_array();

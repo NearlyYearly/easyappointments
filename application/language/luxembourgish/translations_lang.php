@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'De CalDAV-Server huet de Benotzernumm
 $lang['caldav_sync_failed_unreachable'] = 'De CalDAV-Server konnt net erreecht ginn. Vergewëssert Iech, datt en leeft an datt d\'Verbindungs-URL richteg ass.';
 $lang['caldav_private_host_warning'] = 'Dëse Server ass an engem private Netz. Beim Verbanne gëtt säin Host bei déi erlaabte Verbindungs-URLen derbäigesat.';
 $lang['caldav_allow_host_and_connect'] = 'Zouloossen a verbannen';
+$lang['buffer_before'] = 'Buffer Before (Minutes)';
+$lang['buffer_after'] = 'Buffer After (Minutes)';
+$lang['buffer_before_hint'] = 'Time that must stay free before an appointment of this service, e.g. for preparation.';
+$lang['buffer_after_hint'] = 'Time that must stay free after an appointment of this service, e.g. for cleaning or travel.';
+$lang['invalid_buffer'] = 'The buffer cannot be negative.';
 // End

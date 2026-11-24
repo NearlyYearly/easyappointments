@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'Server CalDAV je odbio korisničko im
 $lang['caldav_sync_failed_unreachable'] = 'Server CalDAV nije bilo moguće kontaktirati. Provjerite radi li i je li adresa povezivanja ispravna.';
 $lang['caldav_private_host_warning'] = 'Ovaj server je u privatnoj mreži. Povezivanjem će se njegov naziv dodati u dozvoljene adrese povezivanja.';
 $lang['caldav_allow_host_and_connect'] = 'Dozvoli i poveži';
+$lang['buffer_before'] = 'Buffer Before (Minutes)';
+$lang['buffer_after'] = 'Buffer After (Minutes)';
+$lang['buffer_before_hint'] = 'Time that must stay free before an appointment of this service, e.g. for preparation.';
+$lang['buffer_after_hint'] = 'Time that must stay free after an appointment of this service, e.g. for cleaning or travel.';
+$lang['invalid_buffer'] = 'The buffer cannot be negative.';
 // End

@@ -177,4 +177,33 @@ class AvailabilityTest extends TestCase
         // 09:00 -> 09:25 -> 09:50 would only leave 10 minutes, less than the 20-minute duration.
         $this->assertSame(['09:00', '09:25'], $result);
     }
+
+    public function testGenerateAvailableHoursKeepsTheServiceBuffersInsideThePeriod(): void
+    {
+        $service = ['duration' => 30, 'slot_interval' => 15, 'buffer_before' => 15, 'buffer_after' => 15];
+        $periods = [['start' => '09:00', 'end' => '10:30']];
+
+        $result = $this->generate_available_hours('2026-08-26', $service, $periods);
+
+        // 09:15 is the first start after the 15-minute buffer, 09:45 + 30 + 15 ends exactly at 10:30.
+        $this->assertSame(['09:15', '09:30', '09:45'], $result);
+    }
+
+    // ── add_service_buffers() ────────────────────────────────────────────
+
+    public function testAddServiceBuffersWidensAppointmentsByTheirServiceBuffers(): void
+    {
+        $appointments = [
+            ['id_services' => 1, 'start_datetime' => '2026-08-26 10:00:00', 'end_datetime' => '2026-08-26 10:30:00'],
+            ['id_services' => 2, 'start_datetime' => '2026-08-26 12:00:00', 'end_datetime' => '2026-08-26 12:30:00'],
+        ];
+        $services = [1 => ['buffer_before' => 10, 'buffer_after' => 20]];
+
+        $result = $this->availability()->add_service_buffers($appointments, $services);
+
+        $this->assertSame('2026-08-26 09:50:00', $result[0]['start_datetime']);
+        $this->assertSame('2026-08-26 10:50:00', $result[0]['end_datetime']);
+        // A service without known buffers leaves the appointment untouched.
+        $this->assertSame($appointments[1], $result[1]);
+    }
 }

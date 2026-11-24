@@ -5,6 +5,10 @@ developers to maintain and readjust their custom modifications on the main proje
 
 ## [Unreleased]
 
+### Added
+
+- Services can now have a buffer before and after their appointments, so that the booking page keeps that time free for preparation, cleaning or travel (#1224)
+
 ### Fixed
 
 - Booking with the e-mail address of an existing customer no longer overwrites their stored name, phone number and address, which previously let anyone who knew the address change the customer's details; returning customers can still update them from the manage link of their own appointment

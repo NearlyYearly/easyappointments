@@ -2420,6 +2420,10 @@ components:
                     type: integer
                 attendantsNumber:
                     type: integer
+                bufferBefore:
+                    type: integer
+                bufferAfter:
+                    type: integer
                 isPrivate:
                     type: boolean
                 serviceCategoryId:
@@ -2435,6 +2439,8 @@ components:
                 color: '#7cbae8'
                 slotInterval: 30
                 attendantsNumber: 1
+                bufferBefore: 0
+                bufferAfter: 15
                 isPrivate: false
                 serviceCategoryId: null
         ServicePayload:
@@ -2458,6 +2464,10 @@ components:
                     type: integer
                 attendantsNumber:
                     type: integer
+                bufferBefore:
+                    type: integer
+                bufferAfter:
+                    type: integer
                 isPrivate:
                     type: boolean
                 serviceCategoryId:
@@ -2472,6 +2482,8 @@ components:
                 color: '#7cbae8'
                 slotInterval: 30
                 attendantsNumber: 1
+                bufferBefore: 0
+                bufferAfter: 15
                 isPrivate: false
                 serviceCategoryId: null
         ServiceCategoryRecord:

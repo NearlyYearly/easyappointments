@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'CalDAV सर्व्हरने �
 $lang['caldav_sync_failed_unreachable'] = 'CalDAV सर्व्हरशी संपर्क साधता आला नाही. तो सुरू आहे आणि जोडणी URL योग्य आहे याची खात्री करा.';
 $lang['caldav_private_host_warning'] = 'हा सर्व्हर खाजगी नेटवर्कवर आहे. जोडणी केल्यास त्याचे होस्ट अनुमत जोडणी URL मध्ये जोडले जाईल.';
 $lang['caldav_allow_host_and_connect'] = 'परवानगी द्या आणि जोडा';
+$lang['buffer_before'] = 'Buffer Before (Minutes)';
+$lang['buffer_after'] = 'Buffer After (Minutes)';
+$lang['buffer_before_hint'] = 'Time that must stay free before an appointment of this service, e.g. for preparation.';
+$lang['buffer_after_hint'] = 'Time that must stay free after an appointment of this service, e.g. for cleaning or travel.';
+$lang['invalid_buffer'] = 'The buffer cannot be negative.';
 // End

@@ -146,17 +146,18 @@ class Availability
         $interval_value = !empty($service['slot_interval']) ? $service['slot_interval'] : 15;
         $interval = new DateInterval('PT' . (int) $interval_value . 'M');
         $duration = new DateInterval('PT' . (int) $service['duration'] . 'M');
+        $buffer_before = new DateInterval('PT' . (int) ($service['buffer_before'] ?? 0) . 'M');
+        $buffer_after = new DateInterval('PT' . (int) ($service['buffer_after'] ?? 0) . 'M');
 
         foreach ($periods as $period) {
-            $slot_start = clone $period['start'];
-            $slot_end = clone $slot_start;
-            $slot_end->add($duration);
+            $slot_start = (clone $period['start'])->add($buffer_before);
+            $slot_end = (clone $slot_start)->add($duration);
 
-            while ($slot_end <= $period['end']) {
-                // Make sure there is no other service appointment for this time slot.
+            while ((clone $slot_end)->add($buffer_after) <= $period['end']) {
+                // Make sure there is no other service appointment for this time slot, buffers included.
                 $other_service_attendants_number = $this->CI->appointments_model->get_other_service_attendants_number(
-                    $slot_start,
-                    $slot_end,
+                    (clone $slot_start)->sub($buffer_before),
+                    (clone $slot_end)->add($buffer_after),
                     $service['id'],
                     $provider['id'],
                     $exclude_appointment_id,
@@ -366,7 +367,7 @@ class Availability
 
         $appointments = array_values(
             array_merge(
-                $this->CI->appointments_model->get($where),
+                $this->add_service_buffers($this->CI->appointments_model->get($where)),
                 $this->CI->unavailabilities_model->get($where),
                 $this->CI->blocked_periods_model->get_for_period($date, $date),
             ),
@@ -534,6 +535,56 @@ class Availability
     }
 
     /**
+     * Widen the appointments by the buffer before and after of their service.
+     *
+     * The buffers are computed on the fly, so they always follow the appointment when it is moved or deleted.
+     *
+     * @param array $appointments Appointment records.
+     * @param array|null $services Services with their buffers, keyed by ID (loaded from the database when omitted).
+     *
+     * @return array Returns the appointments with the buffers included in their start and end.
+     *
+     * @throws Exception
+     */
+    public function add_service_buffers(array $appointments, ?array $services = null): array
+    {
+        if ($services === null) {
+            $service_ids = array_unique(array_filter(array_column($appointments, 'id_services')));
+
+            $services = $service_ids
+                ? array_column(
+                    $this->CI->db
+                        ->select('id, buffer_before, buffer_after')
+                        ->where_in('id', $service_ids)
+                        ->get('services')
+                        ->result_array(),
+                    null,
+                    'id',
+                )
+                : [];
+        }
+
+        foreach ($appointments as &$appointment) {
+            $service = $services[$appointment['id_services'] ?? null] ?? null;
+
+            if (!$service) {
+                continue;
+            }
+
+            // ponytail: buffers that cross midnight from the previous or next day are not picked up by the date query.
+            $start = new DateTime($appointment['start_datetime']);
+            $start->modify('-' . (int) $service['buffer_before'] . ' minutes');
+            $appointment['start_datetime'] = $start->format('Y-m-d H:i:s');
+
+            $end = new DateTime($appointment['end_datetime']);
+            $end->modify('+' . (int) $service['buffer_after'] . ' minutes');
+            $appointment['end_datetime'] = $end->format('Y-m-d H:i:s');
+        }
+
+        return $appointments;
+    }
+
+    /**
      * Calculate the available appointment hours.
      *
      * Calculate the available appointment hours for the given date. The empty spaces are broken down to 15 min and if
@@ -558,11 +609,14 @@ class Availability
 
             $interval = !empty($service['slot_interval']) ? (int) $service['slot_interval'] : 15;
 
-            $current_hour = $start_hour;
+            // The buffers of the requested service must fit in the empty period too, around the appointment itself.
+            $current_hour = $start_hour->modify('+' . (int) ($service['buffer_before'] ?? 0) . ' minutes');
+
+            $required_minutes = (int) $service['duration'] + (int) ($service['buffer_after'] ?? 0);
 
             $diff = $current_hour->diff($end_hour);
 
-            while ($diff->h * 60 + $diff->i >= (int) $service['duration'] && $diff->invert === 0) {
+            while ($diff->h * 60 + $diff->i >= $required_minutes && $diff->invert === 0) {
                 $available_hours[] = $current_hour->format('H:i');
 
                 $current_hour->add(new DateInterval('PT' . $interval . 'M'));

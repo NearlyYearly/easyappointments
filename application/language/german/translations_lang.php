@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'Der CalDAV-Server hat den Benutzernam
 $lang['caldav_sync_failed_unreachable'] = 'Der CalDAV-Server konnte nicht erreicht werden. Stellen Sie sicher, dass er läuft und dass die Verbindungs-URL korrekt ist.';
 $lang['caldav_private_host_warning'] = 'Dieser Server befindet sich in einem privaten Netzwerk. Beim Verbinden wird sein Host zu den erlaubten Verbindungs-URLs hinzugefügt.';
 $lang['caldav_allow_host_and_connect'] = 'Zulassen und verbinden';
+$lang['buffer_before'] = 'Puffer davor (Minuten)';
+$lang['buffer_after'] = 'Puffer danach (Minuten)';
+$lang['buffer_before_hint'] = 'Zeit, die vor einem Termin dieser Leistung frei bleiben muss, z. B. zur Vorbereitung.';
+$lang['buffer_after_hint'] = 'Zeit, die nach einem Termin dieser Leistung frei bleiben muss, z. B. zum Aufräumen oder für die Anfahrt.';
+$lang['invalid_buffer'] = 'Der Puffer darf nicht negativ sein.';
 // End

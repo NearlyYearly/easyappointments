@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'CalDAV サーバーがユーザー名
 $lang['caldav_sync_failed_unreachable'] = 'CalDAV サーバーに接続できませんでした。サーバーが稼働していること、接続 URL が正しいことを確認してください。';
 $lang['caldav_private_host_warning'] = 'このサーバーはプライベートネットワーク上にあります。接続すると、そのホストが許可する接続 URL に追加されます。';
 $lang['caldav_allow_host_and_connect'] = '許可して接続';
+$lang['buffer_before'] = 'Buffer Before (Minutes)';
+$lang['buffer_after'] = 'Buffer After (Minutes)';
+$lang['buffer_before_hint'] = 'Time that must stay free before an appointment of this service, e.g. for preparation.';
+$lang['buffer_after_hint'] = 'Time that must stay free after an appointment of this service, e.g. for cleaning or travel.';
+$lang['invalid_buffer'] = 'The buffer cannot be negative.';
 // End

@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'CalDAV serveris atmetė naudotojo var
 $lang['caldav_sync_failed_unreachable'] = 'Nepavyko susisiekti su CalDAV serveriu. Įsitikinkite, kad jis veikia ir kad prisijungimo adresas teisingas.';
 $lang['caldav_private_host_warning'] = 'Šis serveris yra privačiame tinkle. Prisijungus jo serverio vardas bus pridėtas prie leidžiamų prisijungimo adresų.';
 $lang['caldav_allow_host_and_connect'] = 'Leisti ir prisijungti';
+$lang['buffer_before'] = 'Buffer Before (Minutes)';
+$lang['buffer_after'] = 'Buffer After (Minutes)';
+$lang['buffer_before_hint'] = 'Time that must stay free before an appointment of this service, e.g. for preparation.';
+$lang['buffer_after_hint'] = 'Time that must stay free after an appointment of this service, e.g. for cleaning or travel.';
+$lang['invalid_buffer'] = 'The buffer cannot be negative.';
 // End

@@ -24,6 +24,8 @@ App.Pages.Services = (function () {
     const $serviceCategoryId = $('#service-category-id');
     const $slotInterval = $('#slot-interval');
     const $attendantsNumber = $('#attendants-number');
+    const $bufferBefore = $('#buffer-before');
+    const $bufferAfter = $('#buffer-after');
     const $isPrivate = $('#is-private');
     const $location = $('#location');
     const $description = $('#description');
@@ -127,6 +129,8 @@ App.Pages.Services = (function () {
             $serviceCategoryId.val('');
             $slotInterval.val('15');
             $attendantsNumber.val('1');
+            $bufferBefore.val('0');
+            $bufferAfter.val('0');
         });
 
         /**
@@ -159,6 +163,8 @@ App.Pages.Services = (function () {
                 color: App.Components.ColorSelection.getColor($color),
                 slot_interval: $slotInterval.val(),
                 attendants_number: $attendantsNumber.val(),
+                buffer_before: $bufferBefore.val() || 0,
+                buffer_after: $bufferAfter.val() || 0,
                 is_private: Number($isPrivate.prop('checked')),
                 id_service_categories: $serviceCategoryId.val() || undefined,
             };
@@ -315,6 +321,14 @@ App.Pages.Services = (function () {
                 throw new Error(lang('invalid_attendants_number'));
             }
 
+            // Validate the buffers.
+            for (const $buffer of [$bufferBefore, $bufferAfter]) {
+                if (Number($buffer.val()) < 0) {
+                    $buffer.addClass('is-invalid');
+                    throw new Error(lang('invalid_buffer'));
+                }
+            }
+
             return true;
         } catch (error) {
             $services.find('.form-message').addClass('alert-danger').text(error.message).show();
@@ -365,6 +379,8 @@ App.Pages.Services = (function () {
         $location.val(service.location);
         $slotInterval.val(service.slot_interval);
         $attendantsNumber.val(service.attendants_number);
+        $bufferBefore.val(service.buffer_before);
+        $bufferAfter.val(service.buffer_after);
         $isPrivate.prop('checked', service.is_private);
         App.Components.ColorSelection.setColor($color, service.color);
 

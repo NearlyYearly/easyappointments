@@ -591,4 +591,9 @@ $lang['caldav_sync_failed_credentials'] = 'CalDAV sunucusu kullanıcı adını v
 $lang['caldav_sync_failed_unreachable'] = 'CalDAV sunucusuna ulaşılamadı. Sunucunun çalıştığından ve bağlantı adresinin doğru olduğundan emin olun.';
 $lang['caldav_private_host_warning'] = 'Bu sunucu özel bir ağda bulunuyor. Bağlandığınızda adresi izin verilen bağlantı adreslerine eklenecek.';
 $lang['caldav_allow_host_and_connect'] = 'İzin ver ve bağlan';
+$lang['buffer_before'] = 'Buffer Before (Minutes)';
+$lang['buffer_after'] = 'Buffer After (Minutes)';
+$lang['buffer_before_hint'] = 'Time that must stay free before an appointment of this service, e.g. for preparation.';
+$lang['buffer_after_hint'] = 'Time that must stay free after an appointment of this service, e.g. for cleaning or travel.';
+$lang['invalid_buffer'] = 'The buffer cannot be negative.';
 // End
