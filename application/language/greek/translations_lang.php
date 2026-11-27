@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'Ο αριθμός δίπλα σε έ
 $lang['free_places'] = 'Ελεύθερες θέσεις';
 $lang['display_free_places_hint'] = 'Κάθε ώρα στη σελίδα κράτησης δείχνει πόσες θέσεις είναι ακόμη ελεύθερες, για υπηρεσίες με περισσότερους από έναν συμμετέχοντες.';
 $lang['free_places_count'] = '{$places} ελεύθερες';
+$lang['free_places_as_booking_settings'] = 'Όπως στις ρυθμίσεις κρατήσεων';
+$lang['free_places_shown'] = 'Εμφάνιση';
+$lang['free_places_hidden'] = 'Απόκρυψη';
+$lang['show_maximum'] = 'Εμφάνιση μέγιστου';
+$lang['show_maximum_hint'] = 'Η ένδειξη ελεύθερων θέσεων δείχνει και τον μέγιστο αριθμό συμμετεχόντων, π.χ. «2 / 3 ελεύθερες».';
+$lang['free_places_count_max'] = '{$places} / {$max} ελεύθερες';
 // End

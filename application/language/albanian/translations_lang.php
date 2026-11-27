@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'Numri pranë një ofruesi zëvendës
 $lang['free_places'] = 'Vende të lira';
 $lang['display_free_places_hint'] = 'Çdo orar në faqen e rezervimit tregon sa vende janë ende të lira, për shërbimet që pranojnë më shumë se një pjesëmarrës.';
 $lang['free_places_count'] = '{$places} të lira';
+$lang['free_places_as_booking_settings'] = 'Si në cilësimet e rezervimit';
+$lang['free_places_shown'] = 'Shfaq';
+$lang['free_places_hidden'] = 'Fshih';
+$lang['show_maximum'] = 'Shfaq maksimumin';
+$lang['show_maximum_hint'] = 'Shenja e vendeve të lira tregon edhe numrin maksimal të pjesëmarrësve, p.sh. "2 / 3 të lira".';
+$lang['free_places_count_max'] = '{$places} / {$max} të lira';
 // End

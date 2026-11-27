@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'Palveluntuottajan vieressä oleva lu
 $lang['free_places'] = 'Vapaat paikat';
 $lang['display_free_places_hint'] = 'Jokainen ajankohta varaussivulla näyttää, montako paikkaa on vielä vapaana, palveluissa joihin mahtuu useampi kuin yksi osallistuja.';
 $lang['free_places_count'] = '{$places} vapaana';
+$lang['free_places_as_booking_settings'] = 'Kuten varausasetuksissa';
+$lang['free_places_shown'] = 'Näytä';
+$lang['free_places_hidden'] = 'Piilota';
+$lang['show_maximum'] = 'Näytä enimmäismäärä';
+$lang['show_maximum_hint'] = 'Vapaiden paikkojen merkki näyttää myös osallistujien enimmäismäärän, esim. "2 / 3 vapaana".';
+$lang['free_places_count_max'] = '{$places} / {$max} vapaana';
 // End

@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'D\'Zuel nieft engem Mataarbechter er
 $lang['free_places'] = 'Fräi Plazen';
 $lang['display_free_places_hint'] = 'All Zäitpunkt op der Buchungssäit weist, wéi vill Plaze nach fräi sinn, bei Servicer mat méi wéi engem Participant.';
 $lang['free_places_count'] = '{$places} fräi';
+$lang['free_places_as_booking_settings'] = 'Wéi an de Buchungsastellungen';
+$lang['free_places_shown'] = 'Uweisen';
+$lang['free_places_hidden'] = 'Verstoppen';
+$lang['show_maximum'] = 'Maximum uweisen';
+$lang['show_maximum_hint'] = 'D\'Ufro vun de fräie Plazen weist och déi maximal Zuel vu Participanten, z. B. "2 / 3 fräi".';
+$lang['free_places_count_max'] = '{$places} / {$max} fräi';
 // End

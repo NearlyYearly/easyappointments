@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'Het getal naast een medewerker verva
 $lang['free_places'] = 'Vrije plaatsen';
 $lang['display_free_places_hint'] = 'Elk tijdslot op de boekingspagina toont hoeveel plaatsen nog vrij zijn, voor diensten met meer dan één deelnemer.';
 $lang['free_places_count'] = '{$places} vrij';
+$lang['free_places_as_booking_settings'] = 'Zoals in de boekingsinstellingen';
+$lang['free_places_shown'] = 'Tonen';
+$lang['free_places_hidden'] = 'Verbergen';
+$lang['show_maximum'] = 'Maximum tonen';
+$lang['show_maximum_hint'] = 'Het label met vrije plaatsen toont ook het maximale aantal deelnemers, bijv. "2 / 3 vrij".';
+$lang['free_places_count_max'] = '{$places} / {$max} vrij';
 // End

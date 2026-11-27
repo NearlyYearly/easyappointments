@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'प्रबन्धक के प�
 $lang['free_places'] = 'खाली स्थान';
 $lang['display_free_places_hint'] = 'एक से अधिक प्रतिभागियों वाली सेवाओं के लिए, बुकिंग पेज पर हर समय स्लॉट दिखाता है कि कितने स्थान अभी खाली हैं।';
 $lang['free_places_count'] = '{$places} खाली';
+$lang['free_places_as_booking_settings'] = 'बुकिंग सेटिंग्स के अनुसार';
+$lang['free_places_shown'] = 'दिखाएँ';
+$lang['free_places_hidden'] = 'छिपाएँ';
+$lang['show_maximum'] = 'अधिकतम दिखाएँ';
+$lang['show_maximum_hint'] = 'खाली स्थानों का बैज प्रतिभागियों की अधिकतम संख्या भी दिखाता है, जैसे "2 / 3 खाली"।';
+$lang['free_places_count_max'] = '{$places} / {$max} खाली';
 // End

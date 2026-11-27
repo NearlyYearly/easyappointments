@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'O número ao lado de um atendente su
 $lang['free_places'] = 'Vagas livres';
 $lang['display_free_places_hint'] = 'Cada horário na página de agendamento mostra quantas vagas ainda estão livres, para serviços que aceitam mais de um participante.';
 $lang['free_places_count'] = '{$places} vagas';
+$lang['free_places_as_booking_settings'] = 'Como nas configurações de agendamento';
+$lang['free_places_shown'] = 'Mostrar';
+$lang['free_places_hidden'] = 'Ocultar';
+$lang['show_maximum'] = 'Mostrar o máximo';
+$lang['show_maximum_hint'] = 'O selo de vagas livres também mostra o número máximo de participantes, por ex. "2 / 3 vagas".';
+$lang['free_places_count_max'] = '{$places} / {$max} vagas';
 // End

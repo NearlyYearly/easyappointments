@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'व्यवस्थापकाच
 $lang['free_places'] = 'रिक्त जागा';
 $lang['display_free_places_hint'] = 'एकापेक्षा जास्त सहभागी असलेल्या सेवांसाठी, बुकिंग पृष्ठावरील प्रत्येक वेळ किती जागा अजून रिक्त आहेत ते दाखवते.';
 $lang['free_places_count'] = '{$places} रिक्त';
+$lang['free_places_as_booking_settings'] = 'बुकिंग सेटिंग्जप्रमाणे';
+$lang['free_places_shown'] = 'दाखवा';
+$lang['free_places_hidden'] = 'लपवा';
+$lang['show_maximum'] = 'कमाल दाखवा';
+$lang['show_maximum_hint'] = 'रिक्त जागांचा बॅज सहभागींची कमाल संख्याही दाखवतो, उदा. "2 / 3 रिक्त".';
+$lang['free_places_count_max'] = '{$places} / {$max} रिक्त';
 // End

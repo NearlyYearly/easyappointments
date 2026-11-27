@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'Číslo vedle poskytovatele nahrazuj
 $lang['free_places'] = 'Volná místa';
 $lang['display_free_places_hint'] = 'Každý časový termín na stránce rezervace ukazuje, kolik míst je ještě volných, u služeb pro více než jednoho účastníka.';
 $lang['free_places_count'] = '{$places} volných';
+$lang['free_places_as_booking_settings'] = 'Jako v nastavení rezervací';
+$lang['free_places_shown'] = 'Zobrazit';
+$lang['free_places_hidden'] = 'Skrýt';
+$lang['show_maximum'] = 'Zobrazit maximum';
+$lang['show_maximum_hint'] = 'Odznak volných míst ukazuje také maximální počet účastníků, např. „2 / 3 volných“.';
+$lang['free_places_count_max'] = '{$places} / {$max} volných';
 // End

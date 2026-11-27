@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'Tallet ud for en leverandør erstatt
 $lang['free_places'] = 'Ledige pladser';
 $lang['display_free_places_hint'] = 'Hvert tidspunkt på bookingsiden viser, hvor mange pladser der stadig er ledige, for ydelser med mere end én deltager.';
 $lang['free_places_count'] = '{$places} ledige';
+$lang['free_places_as_booking_settings'] = 'Som i bookingindstillingerne';
+$lang['free_places_shown'] = 'Vis';
+$lang['free_places_hidden'] = 'Skjul';
+$lang['show_maximum'] = 'Vis maksimum';
+$lang['show_maximum_hint'] = 'Mærket med ledige pladser viser også det maksimale antal deltagere, f.eks. "2 / 3 ledige".';
+$lang['free_places_count_max'] = '{$places} / {$max} ledige';
 // End

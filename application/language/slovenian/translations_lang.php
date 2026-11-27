@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'Število ob ponudniku za tega ponudn
 $lang['free_places'] = 'Prosta mesta';
 $lang['display_free_places_hint'] = 'Vsak termin na strani za rezervacijo prikaže, koliko mest je še prostih, pri storitvah z več kot enim udeležencem.';
 $lang['free_places_count'] = '{$places} prostih';
+$lang['free_places_as_booking_settings'] = 'Kot v nastavitvah rezervacij';
+$lang['free_places_shown'] = 'Prikaži';
+$lang['free_places_hidden'] = 'Skrij';
+$lang['show_maximum'] = 'Prikaži največje število';
+$lang['show_maximum_hint'] = 'Oznaka prostih mest prikaže tudi največje število udeležencev, npr. "2 / 3 prostih".';
+$lang['free_places_count_max'] = '{$places} / {$max} prostih';
 // End

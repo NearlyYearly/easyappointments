@@ -74,7 +74,7 @@ App.Http.Booking = (function () {
             manage_mode: Number(vars('manage_mode') || 0),
             appointment_id: appointmentId,
             appointment_hash: vars('manage_mode') ? vars('appointment_data').hash : null,
-            with_free_places: Number(Boolean(Number(vars('display_free_places')))),
+            with_free_places: 1, // The server decides per service whether they are displayed.
         };
 
         $.post(url, data).done((response) => {
@@ -127,10 +127,14 @@ App.Http.Booking = (function () {
                     });
 
                     // Null for services that take a single attendant, where the badge would always say 1.
-                    if (freePlaces[availableHour] != null) {
+                    const places = freePlaces[availableHour];
+
+                    if (places) {
                         $('<span/>', {
                             'class': 'badge rounded-pill text-bg-light border ms-2 free-places',
-                            'text': lang('free_places_count').replace('{$places}', freePlaces[availableHour]),
+                            'text': (places.max ? lang('free_places_count_max') : lang('free_places_count'))
+                                .replace('{$places}', places.free)
+                                .replace('{$max}', places.max),
                         }).appendTo($availableHour);
                     }
 

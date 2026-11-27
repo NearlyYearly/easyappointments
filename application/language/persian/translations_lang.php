@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'عدد کنار ارائه دهند�
 $lang['free_places'] = 'جای خالی';
 $lang['display_free_places_hint'] = 'برای خدماتی که بیش از یک شرکت‌کننده می‌پذیرند، هر بازه زمانی در صفحه رزرو تعداد جاهای خالی باقی‌مانده را نشان می‌دهد.';
 $lang['free_places_count'] = '{$places} خالی';
+$lang['free_places_as_booking_settings'] = 'مانند تنظیمات رزرو';
+$lang['free_places_shown'] = 'نمایش';
+$lang['free_places_hidden'] = 'پنهان';
+$lang['show_maximum'] = 'نمایش حداکثر';
+$lang['show_maximum_hint'] = 'نشان جاهای خالی، حداکثر تعداد شرکت‌کنندگان را هم نشان می‌دهد، مثلاً «2 / 3 خالی».';
+$lang['free_places_count_max'] = '{$places} / {$max} خالی';
 // End

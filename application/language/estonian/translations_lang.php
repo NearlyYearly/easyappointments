@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'Teenusepakkuja kõrval olev arv asen
 $lang['free_places'] = 'Vabad kohad';
 $lang['display_free_places_hint'] = 'Iga ajapilu broneerimislehel näitab, mitu kohta on veel vaba, teenuste puhul, mis lubavad rohkem kui ühte osalejat.';
 $lang['free_places_count'] = '{$places} vaba';
+$lang['free_places_as_booking_settings'] = 'Nagu broneerimise seadetes';
+$lang['free_places_shown'] = 'Näita';
+$lang['free_places_hidden'] = 'Peida';
+$lang['show_maximum'] = 'Näita maksimumi';
+$lang['show_maximum_hint'] = 'Vabade kohtade märk näitab ka osalejate maksimaalset arvu, nt "2 / 3 vaba".';
+$lang['free_places_count_max'] = '{$places} / {$max} vaba';
 // End

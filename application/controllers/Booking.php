@@ -289,7 +289,6 @@ class Booking extends EA_Controller
             'first_weekday' => $first_weekday,
             'display_cookie_notice' => $display_cookie_notice,
             'display_any_provider' => setting('display_any_provider'),
-            'display_free_places' => setting('display_free_places'),
             'future_booking_limit' => setting('future_booking_limit'),
             'appointment_data' => $appointment,
             'provider_data' => $provider ? filter_sensitive_user_data($provider) : null,
@@ -860,9 +859,9 @@ class Booking extends EA_Controller
                     )
                     : [$this->providers_model->find($provider_id)];
 
-            // Free places per hour, summed over the providers. Null where no provider takes more than one attendant,
-            // since a badge would only ever say "1" there.
-            $places = [];
+            // Free and maximum places per hour, summed over the providers that have the hour available.
+            $free_places = [];
+            $max_places = [];
             $group_hours = [];
 
             foreach ($providers as $provider) {
@@ -876,7 +875,8 @@ class Booking extends EA_Controller
                 $capacity = $this->services_model->get_attendants_number_for_provider($service, (int) $provider['id']);
 
                 foreach ($provider_places as $hour => $free) {
-                    $places[$hour] = ($places[$hour] ?? 0) + $free;
+                    $free_places[$hour] = ($free_places[$hour] ?? 0) + $free;
+                    $max_places[$hour] = ($max_places[$hour] ?? 0) + $capacity;
 
                     if ($capacity > 1) {
                         $group_hours[$hour] = true;
@@ -884,14 +884,24 @@ class Booking extends EA_Controller
                 }
             }
 
-            foreach ($places as $hour => $free) {
-                $places[$hour] = isset($group_hours[$hour]) ? $free : null;
+            ksort($free_places, SORT_STRING);
+
+            // The service overrides the booking setting when it is set, NULL follows it.
+            $display_free_places = $service['display_free_places'] ?? (bool) setting('display_free_places');
+
+            // The booking page asks for the free places, every other caller gets the hours. Hours without a provider
+            // that takes more than one attendant get null, since a badge would only ever say "1" there.
+            if (request('with_free_places') && $display_free_places) {
+                $response = [];
+
+                foreach ($free_places as $hour => $free) {
+                    $response[$hour] = isset($group_hours[$hour])
+                        ? ['free' => $free, 'max' => $service['display_max_attendants'] ? $max_places[$hour] : null]
+                        : null;
+                }
+            } else {
+                $response = array_keys($free_places);
             }
-
-            ksort($places, SORT_STRING);
-
-            // The booking page asks for the free places only when it displays them, every other caller gets the hours.
-            $response = request('with_free_places') && setting('display_free_places') ? $places : array_keys($places);
 
             json_response($response);
         } catch (Throwable $e) {

@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'A szolgáltató melletti szám az ad
 $lang['free_places'] = 'Szabad helyek';
 $lang['display_free_places_hint'] = 'A foglalási oldal minden időpontja mutatja, hány hely szabad még, a több résztvevős szolgáltatásoknál.';
 $lang['free_places_count'] = '{$places} szabad';
+$lang['free_places_as_booking_settings'] = 'A foglalási beállítások szerint';
+$lang['free_places_shown'] = 'Megjelenítés';
+$lang['free_places_hidden'] = 'Elrejtés';
+$lang['show_maximum'] = 'Maximum megjelenítése';
+$lang['show_maximum_hint'] = 'A szabad helyek jelzése a résztvevők legnagyobb számát is mutatja, pl. „2 / 3 szabad”.';
+$lang['free_places_count_max'] = '{$places} / {$max} szabad';
 // End

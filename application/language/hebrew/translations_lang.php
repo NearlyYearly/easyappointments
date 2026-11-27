@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'המספר שליד ספק מחלי�
 $lang['free_places'] = 'מקומות פנויים';
 $lang['display_free_places_hint'] = 'כל משבצת זמן בדף ההזמנה מציגה כמה מקומות עדיין פנויים, עבור שירותים שמקבלים יותר ממשתתף אחד.';
 $lang['free_places_count'] = '{$places} פנויים';
+$lang['free_places_as_booking_settings'] = 'כמו בהגדרות ההזמנה';
+$lang['free_places_shown'] = 'הצג';
+$lang['free_places_hidden'] = 'הסתר';
+$lang['show_maximum'] = 'הצג מקסימום';
+$lang['show_maximum_hint'] = 'תג המקומות הפנויים מציג גם את מספר המשתתפים המרבי, למשל "2 / 3 פנויים".';
+$lang['free_places_count_max'] = '{$places} / {$max} פנויים';
 // End

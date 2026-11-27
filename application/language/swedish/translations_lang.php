@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'Talet bredvid en utförare ersätter
 $lang['free_places'] = 'Lediga platser';
 $lang['display_free_places_hint'] = 'Varje tid på bokningssidan visar hur många platser som fortfarande är lediga, för tjänster med fler än en deltagare.';
 $lang['free_places_count'] = '{$places} lediga';
+$lang['free_places_as_booking_settings'] = 'Som i bokningsinställningarna';
+$lang['free_places_shown'] = 'Visa';
+$lang['free_places_hidden'] = 'Dölj';
+$lang['show_maximum'] = 'Visa maximum';
+$lang['show_maximum_hint'] = 'Märket med lediga platser visar även det högsta antalet deltagare, t.ex. "2 / 3 lediga".';
+$lang['free_places_count_max'] = '{$places} / {$max} lediga';
 // End

@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'O número junto a um fornecedor subs
 $lang['free_places'] = 'Lugares livres';
 $lang['display_free_places_hint'] = 'Cada horário na página de marcação mostra quantos lugares ainda estão livres, para serviços que aceitam mais de um participante.';
 $lang['free_places_count'] = '{$places} livres';
+$lang['free_places_as_booking_settings'] = 'Como nas definições de marcação';
+$lang['free_places_shown'] = 'Mostrar';
+$lang['free_places_hidden'] = 'Ocultar';
+$lang['show_maximum'] = 'Mostrar o máximo';
+$lang['show_maximum_hint'] = 'O distintivo de lugares livres mostra também o número máximo de participantes, p. ex. "2 / 3 livres".';
+$lang['free_places_count_max'] = '{$places} / {$max} livres';
 // End

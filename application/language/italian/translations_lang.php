@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'Il numero accanto a un fornitore sos
 $lang['free_places'] = 'Posti liberi';
 $lang['display_free_places_hint'] = 'Ogni fascia oraria della pagina di prenotazione mostra quanti posti sono ancora liberi, per i servizi che accettano più di un partecipante.';
 $lang['free_places_count'] = '{$places} liberi';
+$lang['free_places_as_booking_settings'] = 'Come nelle impostazioni di prenotazione';
+$lang['free_places_shown'] = 'Mostra';
+$lang['free_places_hidden'] = 'Nascondi';
+$lang['show_maximum'] = 'Mostra il massimo';
+$lang['show_maximum_hint'] = 'Il badge dei posti liberi mostra anche il numero massimo di partecipanti, ad es. "2 / 3 liberi".';
+$lang['free_places_count_max'] = '{$places} / {$max} liberi';
 // End

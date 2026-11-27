@@ -27,6 +27,8 @@ class Services_model extends EA_Model
         'id' => 'integer',
         'price' => 'float',
         'attendants_number' => 'integer',
+        'display_free_places' => 'boolean',
+        'display_max_attendants' => 'boolean',
         'is_private' => 'boolean',
         'id_service_categories' => 'integer',
     ];
@@ -45,6 +47,8 @@ class Services_model extends EA_Model
         'color' => 'color',
         'slotInterval' => 'slot_interval',
         'attendantsNumber' => 'attendants_number',
+        'displayFreePlaces' => 'display_free_places',
+        'displayMaxAttendants' => 'display_max_attendants',
         'isPrivate' => 'is_private',
         'serviceCategoryId' => 'id_service_categories',
     ];
@@ -60,6 +64,8 @@ class Services_model extends EA_Model
      */
     public function save(array $service): int
     {
+        $service = $this->normalize_free_places_fields($service);
+
         $this->validate($service);
 
         if (empty($service['id'])) {
@@ -67,6 +73,35 @@ class Services_model extends EA_Model
         } else {
             return $this->update($service);
         }
+    }
+
+    /**
+     * Convert the free places fields to their database values.
+     *
+     * Forms post the "as in the booking settings" choice as an empty string and the API as null, both are stored as
+     * NULL. Every other value is stored as 1 or 0.
+     *
+     * @param array $service Service data.
+     *
+     * @return array Service data with the normalized fields.
+     */
+    public function normalize_free_places_fields(array $service): array
+    {
+        if (array_key_exists('display_free_places', $service)) {
+            $value = $service['display_free_places'];
+
+            $service['display_free_places'] =
+                $value === null || $value === '' ? null : (int) filter_var($value, FILTER_VALIDATE_BOOLEAN);
+        }
+
+        if (array_key_exists('display_max_attendants', $service)) {
+            $service['display_max_attendants'] = (int) filter_var(
+                $service['display_max_attendants'],
+                FILTER_VALIDATE_BOOLEAN,
+            );
+        }
+
+        return $service;
     }
 
     /**
@@ -614,6 +649,10 @@ class Services_model extends EA_Model
                 : (!empty($service['id'])
                     ? $this->get_provider_attendants_numbers((int) $service['id'])
                     : [])),
+            'displayFreePlaces' => isset($service['display_free_places'])
+                ? (bool) $service['display_free_places']
+                : null,
+            'displayMaxAttendants' => (bool) ($service['display_max_attendants'] ?? false),
             'isPrivate' => (bool) $service['is_private'],
             'serviceCategoryId' =>
                 $service['id_service_categories'] !== null ? (int) $service['id_service_categories'] : null,
@@ -678,6 +717,14 @@ class Services_model extends EA_Model
 
         if (array_key_exists('serviceCategoryId', $service)) {
             $decoded_resource['id_service_categories'] = $service['serviceCategoryId'];
+        }
+
+        if (array_key_exists('displayFreePlaces', $service)) {
+            $decoded_resource['display_free_places'] = $service['displayFreePlaces'];
+        }
+
+        if (array_key_exists('displayMaxAttendants', $service)) {
+            $decoded_resource['display_max_attendants'] = (bool) $service['displayMaxAttendants'];
         }
 
         if (array_key_exists('isPrivate', $service)) {

@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'ตัวเลขข้างผู
 $lang['free_places'] = 'ที่ว่าง';
 $lang['display_free_places_hint'] = 'สำหรับบริการที่รับผู้เข้าร่วมได้มากกว่าหนึ่งคน แต่ละช่วงเวลาในหน้าจองจะแสดงจำนวนที่ว่างที่เหลืออยู่';
 $lang['free_places_count'] = 'ว่าง {$places}';
+$lang['free_places_as_booking_settings'] = 'ตามการตั้งค่าการจอง';
+$lang['free_places_shown'] = 'แสดง';
+$lang['free_places_hidden'] = 'ซ่อน';
+$lang['show_maximum'] = 'แสดงจำนวนสูงสุด';
+$lang['show_maximum_hint'] = 'ป้ายที่ว่างจะแสดงจำนวนผู้เข้าร่วมสูงสุดด้วย เช่น "ว่าง 2 / 3"';
+$lang['free_places_count_max'] = 'ว่าง {$places} / {$max}';
 // End

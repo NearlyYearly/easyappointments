@@ -31,6 +31,8 @@ class Services extends EA_Controller
         'location',
         'slot_interval',
         'attendants_number',
+        'display_free_places',
+        'display_max_attendants',
         'is_private',
         'id_service_categories',
         'providers',

@@ -152,6 +152,31 @@
                 </div>
             </div>
 
+            <div class="border rounded mb-3 p-3">
+                <label class="form-label" for="display-free-places">
+                    <?= lang('free_places') ?>
+                </label>
+                <select id="display-free-places" class="form-select mb-2">
+                    <option value=""><?= lang('free_places_as_booking_settings') ?></option>
+                    <option value="1"><?= lang('free_places_shown') ?></option>
+                    <option value="0"><?= lang('free_places_hidden') ?></option>
+                </select>
+
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="display-max-attendants">
+
+                    <label class="form-check-label" for="display-max-attendants">
+                        <?= lang('show_maximum') ?>
+                    </label>
+                </div>
+
+                <div class="form-text text-muted">
+                    <small>
+                        <?= lang('show_maximum_hint') ?>
+                    </small>
+                </div>
+            </div>
+
             <div class="mb-3">
                 <label class="form-label" for="description">
                     <?= lang('description') ?>

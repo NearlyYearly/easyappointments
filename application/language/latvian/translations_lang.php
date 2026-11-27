@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'Skaitlis blakus pakalpojumu sniedzē
 $lang['free_places'] = 'Brīvās vietas';
 $lang['display_free_places_hint'] = 'Katrs laiks rezervācijas lapā parāda, cik vietu vēl ir brīvas, pakalpojumiem ar vairāk nekā vienu dalībnieku.';
 $lang['free_places_count'] = '{$places} brīvas';
+$lang['free_places_as_booking_settings'] = 'Kā rezervācijas iestatījumos';
+$lang['free_places_shown'] = 'Rādīt';
+$lang['free_places_hidden'] = 'Slēpt';
+$lang['show_maximum'] = 'Rādīt maksimumu';
+$lang['show_maximum_hint'] = 'Brīvo vietu zīme rāda arī maksimālo dalībnieku skaitu, piem., "2 / 3 brīvas".';
+$lang['free_places_count_max'] = '{$places} / {$max} brīvas';
 // End

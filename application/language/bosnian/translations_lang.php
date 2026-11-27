@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'Broj pored dobavljača zamjenjuje br
 $lang['free_places'] = 'Slobodna mjesta';
 $lang['display_free_places_hint'] = 'Svaki termin na stranici za rezervaciju prikazuje koliko je mjesta još slobodno, za usluge koje primaju više od jednog učesnika.';
 $lang['free_places_count'] = '{$places} slobodno';
+$lang['free_places_as_booking_settings'] = 'Kao u postavkama rezervacije';
+$lang['free_places_shown'] = 'Prikaži';
+$lang['free_places_hidden'] = 'Sakrij';
+$lang['show_maximum'] = 'Prikaži maksimum';
+$lang['show_maximum_hint'] = 'Oznaka slobodnih mjesta prikazuje i najveći broj učesnika, npr. "2 / 3 slobodno".';
+$lang['free_places_count_max'] = '{$places} / {$max} slobodno';
 // End

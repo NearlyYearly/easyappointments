@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'الرقم بجانب المزود �
 $lang['free_places'] = 'الأماكن المتاحة';
 $lang['display_free_places_hint'] = 'يعرض كل موعد في صفحة الحجز عدد الأماكن التي لا تزال متاحة، للخدمات التي تقبل أكثر من مشارك واحد.';
 $lang['free_places_count'] = '{$places} متاح';
+$lang['free_places_as_booking_settings'] = 'كما في إعدادات الحجز';
+$lang['free_places_shown'] = 'إظهار';
+$lang['free_places_hidden'] = 'إخفاء';
+$lang['show_maximum'] = 'إظهار الحد الأقصى';
+$lang['show_maximum_hint'] = 'تعرض شارة الأماكن المتاحة أيضًا الحد الأقصى لعدد المشاركين، مثل "2 / 3 متاح".';
+$lang['free_places_count_max'] = '{$places} / {$max} متاح';
 // End

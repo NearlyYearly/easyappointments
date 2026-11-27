@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = '担当者の横の数値は、その
 $lang['free_places'] = '空き枠';
 $lang['display_free_places_hint'] = '複数の参加者を受け付けるサービスでは、予約ページの各時間枠に残りの空き枠数が表示されます。';
 $lang['free_places_count'] = '残り {$places}';
+$lang['free_places_as_booking_settings'] = '予約設定に従う';
+$lang['free_places_shown'] = '表示';
+$lang['free_places_hidden'] = '非表示';
+$lang['show_maximum'] = '最大数を表示';
+$lang['show_maximum_hint'] = '空き枠のバッジに最大参加人数も表示します（例:「残り 2 / 3」）。';
+$lang['free_places_count_max'] = '残り {$places} / {$max}';
 // End

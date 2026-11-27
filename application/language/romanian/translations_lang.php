@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'Numărul de lângă un furnizor înl
 $lang['free_places'] = 'Locuri libere';
 $lang['display_free_places_hint'] = 'Fiecare interval orar de pe pagina de rezervare arată câte locuri mai sunt libere, pentru serviciile cu mai mult de un participant.';
 $lang['free_places_count'] = '{$places} libere';
+$lang['free_places_as_booking_settings'] = 'Ca în setările de rezervare';
+$lang['free_places_shown'] = 'Afișează';
+$lang['free_places_hidden'] = 'Ascunde';
+$lang['show_maximum'] = 'Afișează maximul';
+$lang['show_maximum_hint'] = 'Insigna locurilor libere arată și numărul maxim de participanți, de ex. „2 / 3 libere”.';
+$lang['free_places_count_max'] = '{$places} / {$max} libere';
 // End

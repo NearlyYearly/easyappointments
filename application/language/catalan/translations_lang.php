@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'El nombre al costat d\'un proveïdor
 $lang['free_places'] = 'Places lliures';
 $lang['display_free_places_hint'] = 'Cada franja horària de la pàgina de reserva mostra quantes places queden lliures, per als serveis que admeten més d\'un assistent.';
 $lang['free_places_count'] = '{$places} lliures';
+$lang['free_places_as_booking_settings'] = 'Com a la configuració de reserves';
+$lang['free_places_shown'] = 'Mostrar';
+$lang['free_places_hidden'] = 'Amagar';
+$lang['show_maximum'] = 'Mostrar el màxim';
+$lang['show_maximum_hint'] = 'La insígnia de places lliures també mostra el nombre màxim d\'assistents, p. ex. "2 / 3 lliures".';
+$lang['free_places_count_max'] = '{$places} / {$max} lliures';
 // End

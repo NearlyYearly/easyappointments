@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = '提供者旁邊的數字會取代服
 $lang['free_places'] = '剩餘名額';
 $lang['display_free_places_hint'] = '對於可接受多名參與者的服務，預約頁面上的每個時段都會顯示剩餘名額。';
 $lang['free_places_count'] = '剩餘 {$places}';
+$lang['free_places_as_booking_settings'] = '與預約設定相同';
+$lang['free_places_shown'] = '顯示';
+$lang['free_places_hidden'] = '隱藏';
+$lang['show_maximum'] = '顯示上限';
+$lang['show_maximum_hint'] = '剩餘名額標記同時顯示最多參與人數，例如「剩餘 2 / 3」。';
+$lang['free_places_count_max'] = '剩餘 {$places} / {$max}';
 // End

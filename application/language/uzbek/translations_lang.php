@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'Mutaxassis yonidagi son shu mutaxass
 $lang['free_places'] = 'Boʻsh joylar';
 $lang['display_free_places_hint'] = 'Bir nechta ishtirokchi qabul qiladigan xizmatlar uchun bron sahifasidagi har bir vaqt nechta joy boʻsh qolganini koʻrsatadi.';
 $lang['free_places_count'] = '{$places} boʻsh';
+$lang['free_places_as_booking_settings'] = 'Bron sozlamalaridagidek';
+$lang['free_places_shown'] = 'Koʻrsatish';
+$lang['free_places_hidden'] = 'Yashirish';
+$lang['show_maximum'] = 'Maksimumni koʻrsatish';
+$lang['show_maximum_hint'] = 'Boʻsh joylar belgisi ishtirokchilarning maksimal sonini ham koʻrsatadi, masalan "2 / 3 boʻsh".';
+$lang['free_places_count_max'] = '{$places} / {$max} boʻsh';
 // End

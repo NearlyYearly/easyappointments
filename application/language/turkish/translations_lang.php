@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'Bir hizmet sağlayıcının yanında
 $lang['free_places'] = 'Boş yerler';
 $lang['display_free_places_hint'] = 'Birden fazla katılımcı kabul eden hizmetlerde, rezervasyon sayfasındaki her saat kaç yerin hâlâ boş olduğunu gösterir.';
 $lang['free_places_count'] = '{$places} boş';
+$lang['free_places_as_booking_settings'] = 'Rezervasyon ayarlarındaki gibi';
+$lang['free_places_shown'] = 'Göster';
+$lang['free_places_hidden'] = 'Gizle';
+$lang['show_maximum'] = 'En fazlayı göster';
+$lang['show_maximum_hint'] = 'Boş yer rozeti en fazla katılımcı sayısını da gösterir, ör. "2 / 3 boş".';
+$lang['free_places_count_max'] = '{$places} / {$max} boş';
 // End

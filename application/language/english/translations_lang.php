@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'The number next to a provider replac
 $lang['free_places'] = 'Free Places';
 $lang['display_free_places_hint'] = 'Each time slot on the booking page shows how many places are still free, for services that accept more than one attendant.';
 $lang['free_places_count'] = '{$places} free';
+$lang['free_places_as_booking_settings'] = 'As in the booking settings';
+$lang['free_places_shown'] = 'Shown';
+$lang['free_places_hidden'] = 'Hidden';
+$lang['show_maximum'] = 'Show Maximum';
+$lang['show_maximum_hint'] = 'The free places badge also shows the maximum number of attendants, e.g. "2 / 3 free".';
+$lang['free_places_count_max'] = '{$places} / {$max} free';
 // End

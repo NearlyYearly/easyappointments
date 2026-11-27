@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'El número junto a un proveedor sust
 $lang['free_places'] = 'Plazas libres';
 $lang['display_free_places_hint'] = 'Cada franja horaria de la página de reserva muestra cuántas plazas quedan libres, para los servicios que admiten más de un asistente.';
 $lang['free_places_count'] = '{$places} libres';
+$lang['free_places_as_booking_settings'] = 'Como en la configuración de reservas';
+$lang['free_places_shown'] = 'Mostrar';
+$lang['free_places_hidden'] = 'Ocultar';
+$lang['show_maximum'] = 'Mostrar el máximo';
+$lang['show_maximum_hint'] = 'La insignia de plazas libres también muestra el número máximo de asistentes, p. ej. "2 / 3 libres".';
+$lang['free_places_count_max'] = '{$places} / {$max} libres';
 // End

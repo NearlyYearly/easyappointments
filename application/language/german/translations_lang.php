@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'Die Zahl neben einem Anbieter ersetz
 $lang['free_places'] = 'Freie Plätze';
 $lang['display_free_places_hint'] = 'Jeder Zeitpunkt auf der Buchungsseite zeigt, wie viele Plätze noch frei sind, bei Dienstleistungen mit mehr als einem Teilnehmer.';
 $lang['free_places_count'] = '{$places} frei';
+$lang['free_places_as_booking_settings'] = 'Wie in den Buchungseinstellungen';
+$lang['free_places_shown'] = 'Anzeigen';
+$lang['free_places_hidden'] = 'Ausblenden';
+$lang['show_maximum'] = 'Maximum anzeigen';
+$lang['show_maximum_hint'] = 'Die Anzeige der freien Plätze enthält auch die maximale Teilnehmerzahl, z. B. „2 / 3 frei“.';
+$lang['free_places_count_max'] = '{$places} / {$max} frei';
 // End

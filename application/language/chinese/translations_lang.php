@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = '服务人员旁边的数字将替代
 $lang['free_places'] = '剩余名额';
 $lang['display_free_places_hint'] = '对于可接受多名参与者的服务，预约页面上的每个时间段都会显示剩余名额。';
 $lang['free_places_count'] = '剩余 {$places}';
+$lang['free_places_as_booking_settings'] = '与预约设置相同';
+$lang['free_places_shown'] = '显示';
+$lang['free_places_hidden'] = '隐藏';
+$lang['show_maximum'] = '显示上限';
+$lang['show_maximum_hint'] = '剩余名额标记同时显示最多参与人数，例如“剩余 2 / 3”。';
+$lang['free_places_count_max'] = '剩余 {$places} / {$max}';
 // End

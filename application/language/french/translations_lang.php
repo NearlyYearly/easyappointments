@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'Le nombre indiqué à côté d\'un e
 $lang['free_places'] = 'Places libres';
 $lang['display_free_places_hint'] = 'Chaque créneau de la page de réservation indique le nombre de places encore libres, pour les services acceptant plus d\'un participant.';
 $lang['free_places_count'] = '{$places} libres';
+$lang['free_places_as_booking_settings'] = 'Comme dans les paramètres de réservation';
+$lang['free_places_shown'] = 'Afficher';
+$lang['free_places_hidden'] = 'Masquer';
+$lang['show_maximum'] = 'Afficher le maximum';
+$lang['show_maximum_hint'] = 'Le badge des places libres affiche aussi le nombre maximal de participants, p. ex. « 2 / 3 libres ».';
+$lang['free_places_count_max'] = '{$places} / {$max} libres';
 // End

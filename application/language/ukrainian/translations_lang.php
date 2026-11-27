@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'Число поруч із пров�
 $lang['free_places'] = 'Вільні місця';
 $lang['display_free_places_hint'] = 'Для послуг з кількома учасниками кожен час на сторінці бронювання показує, скільки місць ще вільно.';
 $lang['free_places_count'] = '{$places} вільно';
+$lang['free_places_as_booking_settings'] = 'Як у налаштуваннях бронювання';
+$lang['free_places_shown'] = 'Показувати';
+$lang['free_places_hidden'] = 'Приховувати';
+$lang['show_maximum'] = 'Показувати максимум';
+$lang['show_maximum_hint'] = 'Значок вільних місць показує й максимальну кількість учасників, наприклад «2 / 3 вільно».';
+$lang['free_places_count_max'] = '{$places} / {$max} вільно';
 // End

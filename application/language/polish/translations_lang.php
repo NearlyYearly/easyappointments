@@ -596,4 +596,10 @@ $lang['provider_attendants_number_hint'] = 'Liczba obok osoby z personelu zastę
 $lang['free_places'] = 'Wolne miejsca';
 $lang['display_free_places_hint'] = 'Każdy termin na stronie rezerwacji pokazuje, ile miejsc jest jeszcze wolnych, dla usług z więcej niż jednym uczestnikiem.';
 $lang['free_places_count'] = '{$places} wolne';
+$lang['free_places_as_booking_settings'] = 'Jak w ustawieniach rezerwacji';
+$lang['free_places_shown'] = 'Pokaż';
+$lang['free_places_hidden'] = 'Ukryj';
+$lang['show_maximum'] = 'Pokaż maksimum';
+$lang['show_maximum_hint'] = 'Znacznik wolnych miejsc pokazuje też maksymalną liczbę uczestników, np. „2 / 3 wolne”.';
+$lang['free_places_count_max'] = '{$places} / {$max} wolne';
 // End
