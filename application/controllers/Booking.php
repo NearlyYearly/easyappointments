@@ -888,6 +888,7 @@ class Booking extends EA_Controller
 
             // The service overrides the booking setting when it is set, NULL follows it.
             $display_free_places = $service['display_free_places'] ?? (bool) setting('display_free_places');
+            $display_max_attendants = $service['display_max_attendants'] ?? (bool) setting('display_max_attendants');
 
             // The booking page asks for the free places, every other caller gets the hours. Hours without a provider
             // that takes more than one attendant get null, since a badge would only ever say "1" there.
@@ -896,7 +897,7 @@ class Booking extends EA_Controller
 
                 foreach ($free_places as $hour => $free) {
                     $response[$hour] = isset($group_hours[$hour])
-                        ? ['free' => $free, 'max' => $service['display_max_attendants'] ? $max_places[$hour] : null]
+                        ? ['free' => $free, 'max' => $display_max_attendants ? $max_places[$hour] : null]
                         : null;
                 }
             } else {

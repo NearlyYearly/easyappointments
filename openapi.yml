@@ -2432,7 +2432,8 @@ components:
                     description: Shows the free places next to the time slots of the booking page. Null follows the booking settings.
                 displayMaxAttendants:
                     type: boolean
-                    description: The free places badge also shows the maximum number of attendants.
+                    nullable: true
+                    description: The free places badge also shows the maximum number of attendants. Null follows the booking settings.
                 isPrivate:
                     type: boolean
                 serviceCategoryId:
@@ -2451,7 +2452,7 @@ components:
                 providerAttendantsNumbers:
                     '2': 6
                 displayFreePlaces: null
-                displayMaxAttendants: false
+                displayMaxAttendants: null
                 isPrivate: false
                 serviceCategoryId: null
         ServicePayload:
@@ -2487,7 +2488,8 @@ components:
                     description: Shows the free places next to the time slots of the booking page. Null follows the booking settings.
                 displayMaxAttendants:
                     type: boolean
-                    description: The free places badge also shows the maximum number of attendants.
+                    nullable: true
+                    description: The free places badge also shows the maximum number of attendants. Null follows the booking settings.
                 isPrivate:
                     type: boolean
                 serviceCategoryId:
@@ -2505,7 +2507,7 @@ components:
                 providerAttendantsNumbers:
                     '2': 6
                 displayFreePlaces: null
-                displayMaxAttendants: false
+                displayMaxAttendants: null
                 isPrivate: false
                 serviceCategoryId: null
         ServiceCategoryRecord:

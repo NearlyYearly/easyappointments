@@ -379,6 +379,22 @@
 
                                     <div class="mb-3">
                                         <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="display-max-attendants"
+                                                   data-field="display_max_attendants">
+                                            <label class="form-check-label" for="display-max-attendants">
+                                                <?= lang('show_maximum') ?>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-text text-muted">
+                                            <small>
+                                                <?= lang('show_maximum_hint') ?>
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <div class="form-check form-switch">
                                             <input class="form-check-input" type="checkbox" id="display-login-button"
                                                    data-field="display_login_button">
                                             <label class="form-check-label" for="display-login-button">

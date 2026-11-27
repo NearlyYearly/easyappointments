@@ -130,7 +130,7 @@ App.Pages.Services = (function () {
             $slotInterval.val('15');
             $attendantsNumber.val('1');
             $displayFreePlaces.val('');
-            $displayMaxAttendants.prop('checked', false);
+            $displayMaxAttendants.val('');
         });
 
         /**
@@ -165,7 +165,7 @@ App.Pages.Services = (function () {
                 attendants_number: $attendantsNumber.val(),
                 // An empty value follows the booking settings.
                 display_free_places: $displayFreePlaces.val(),
-                display_max_attendants: Number($displayMaxAttendants.prop('checked')),
+                display_max_attendants: $displayMaxAttendants.val(),
                 is_private: Number($isPrivate.prop('checked')),
                 id_service_categories: $serviceCategoryId.val() || undefined,
             };
@@ -353,7 +353,7 @@ App.Pages.Services = (function () {
 
         $services.find('.record-details').find('input, select, textarea').val('').prop('disabled', true);
         $services.find('.record-details .form-label span').prop('hidden', true);
-        $services.find('.record-details #is-private, .record-details #display-max-attendants').prop('checked', false);
+        $services.find('.record-details #is-private').prop('checked', false);
         $services.find('.record-details h4 a').remove();
 
         $services.find('.add-edit-delete-group').show();
@@ -387,12 +387,10 @@ App.Pages.Services = (function () {
         $slotInterval.val(service.slot_interval);
         $attendantsNumber.val(service.attendants_number);
         $isPrivate.prop('checked', service.is_private);
-        $displayFreePlaces.val(
-            service.display_free_places === null || service.display_free_places === undefined
-                ? ''
-                : String(Number(service.display_free_places)),
-        );
-        $displayMaxAttendants.prop('checked', Boolean(Number(service.display_max_attendants)));
+        // NULL follows the booking settings, shown as the empty option.
+        const optionValue = (value) => (value === null || value === undefined ? '' : String(Number(value)));
+        $displayFreePlaces.val(optionValue(service.display_free_places));
+        $displayMaxAttendants.val(optionValue(service.display_max_attendants));
         App.Components.ColorSelection.setColor($color, service.color);
 
         const serviceCategoryId = service.id_service_categories !== null ? service.id_service_categories : '';

@@ -162,13 +162,14 @@
                     <option value="0"><?= lang('free_places_hidden') ?></option>
                 </select>
 
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" id="display-max-attendants">
-
-                    <label class="form-check-label" for="display-max-attendants">
-                        <?= lang('show_maximum') ?>
-                    </label>
-                </div>
+                <label class="form-label" for="display-max-attendants">
+                    <?= lang('show_maximum') ?>
+                </label>
+                <select id="display-max-attendants" class="form-select">
+                    <option value=""><?= lang('free_places_as_booking_settings') ?></option>
+                    <option value="1"><?= lang('free_places_shown') ?></option>
+                    <option value="0"><?= lang('free_places_hidden') ?></option>
+                </select>
 
                 <div class="form-text text-muted">
                     <small>

@@ -78,8 +78,8 @@ class Services_model extends EA_Model
     /**
      * Convert the free places fields to their database values.
      *
-     * Forms post the "as in the booking settings" choice as an empty string and the API as null, both are stored as
-     * NULL. Every other value is stored as 1 or 0.
+     * Both fields follow their booking setting when they are NULL. Forms post that choice as an empty string and the
+     * API as null, both are stored as NULL. Every other value is stored as 1 or 0.
      *
      * @param array $service Service data.
      *
@@ -87,18 +87,13 @@ class Services_model extends EA_Model
      */
     public function normalize_free_places_fields(array $service): array
     {
-        if (array_key_exists('display_free_places', $service)) {
-            $value = $service['display_free_places'];
+        foreach (['display_free_places', 'display_max_attendants'] as $field) {
+            if (array_key_exists($field, $service)) {
+                $value = $service[$field];
 
-            $service['display_free_places'] =
-                $value === null || $value === '' ? null : (int) filter_var($value, FILTER_VALIDATE_BOOLEAN);
-        }
-
-        if (array_key_exists('display_max_attendants', $service)) {
-            $service['display_max_attendants'] = (int) filter_var(
-                $service['display_max_attendants'],
-                FILTER_VALIDATE_BOOLEAN,
-            );
+                $service[$field] =
+                    $value === null || $value === '' ? null : (int) filter_var($value, FILTER_VALIDATE_BOOLEAN);
+            }
         }
 
         return $service;
@@ -652,7 +647,9 @@ class Services_model extends EA_Model
             'displayFreePlaces' => isset($service['display_free_places'])
                 ? (bool) $service['display_free_places']
                 : null,
-            'displayMaxAttendants' => (bool) ($service['display_max_attendants'] ?? false),
+            'displayMaxAttendants' => isset($service['display_max_attendants'])
+                ? (bool) $service['display_max_attendants']
+                : null,
             'isPrivate' => (bool) $service['is_private'],
             'serviceCategoryId' =>
                 $service['id_service_categories'] !== null ? (int) $service['id_service_categories'] : null,
@@ -724,7 +721,7 @@ class Services_model extends EA_Model
         }
 
         if (array_key_exists('displayMaxAttendants', $service)) {
-            $decoded_resource['display_max_attendants'] = (bool) $service['displayMaxAttendants'];
+            $decoded_resource['display_max_attendants'] = $service['displayMaxAttendants'];
         }
 
         if (array_key_exists('isPrivate', $service)) {

@@ -144,8 +144,10 @@ class ServicesModelTest extends TestCase
     {
         $model = $this->services_model();
 
-        $this->assertNull($model->normalize_free_places_fields(['display_free_places' => ''])['display_free_places']);
-        $this->assertNull($model->normalize_free_places_fields(['display_free_places' => null])['display_free_places']);
+        foreach (['display_free_places', 'display_max_attendants'] as $field) {
+            $this->assertNull($model->normalize_free_places_fields([$field => ''])[$field]);
+            $this->assertNull($model->normalize_free_places_fields([$field => null])[$field]);
+        }
     }
 
     public function testNormalizeFreePlacesFieldsStoresOverridesAsOneOrZero(): void
@@ -181,7 +183,7 @@ class ServicesModelTest extends TestCase
     {
         $model = $this->services_model();
 
-        foreach ([null, true, false] as $display_free_places) {
+        foreach ([null, true, false] as $value) {
             $service = [
                 'id' => 1,
                 'name' => 'Yoga',
@@ -192,8 +194,8 @@ class ServicesModelTest extends TestCase
                 'location' => null,
                 'slot_interval' => 15,
                 'attendants_number' => 10,
-                'display_free_places' => $display_free_places,
-                'display_max_attendants' => true,
+                'display_free_places' => $value,
+                'display_max_attendants' => $value,
                 'is_private' => false,
                 'id_service_categories' => null,
                 'provider_attendants_numbers' => [],
@@ -201,14 +203,14 @@ class ServicesModelTest extends TestCase
 
             $model->api_encode($service);
 
-            $this->assertSame($display_free_places, $service['displayFreePlaces']);
-            $this->assertTrue($service['displayMaxAttendants']);
+            $this->assertSame($value, $service['displayFreePlaces']);
+            $this->assertSame($value, $service['displayMaxAttendants']);
 
             $decoded = $service;
             $model->api_decode($decoded);
 
-            $this->assertSame($display_free_places, $decoded['display_free_places']);
-            $this->assertTrue($decoded['display_max_attendants']);
+            $this->assertSame($value, $decoded['display_free_places']);
+            $this->assertSame($value, $decoded['display_max_attendants']);
         }
     }
 }
