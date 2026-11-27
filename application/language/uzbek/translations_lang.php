@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Bu server shaxsiy tarmoqda joylashgan. U
 $lang['caldav_allow_host_and_connect'] = 'Ruxsat berish va ulanish';
 $lang['provider_attendants_number'] = 'Ushbu mutaxassisning ishtirokchilar soni';
 $lang['provider_attendants_number_hint'] = 'Mutaxassis yonidagi son shu mutaxassis uchun xizmatning ishtirokchilar soni o\'rnini bosadi. Xizmat qiymatidan foydalanish uchun bo\'sh qoldiring.';
+$lang['free_places'] = 'Boʻsh joylar';
+$lang['display_free_places_hint'] = 'Bir nechta ishtirokchi qabul qiladigan xizmatlar uchun bron sahifasidagi har bir vaqt nechta joy boʻsh qolganini koʻrsatadi.';
+$lang['free_places_count'] = '{$places} boʻsh';
 // End

@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Ta strežnik je v zasebnem omrežju. S p
 $lang['caldav_allow_host_and_connect'] = 'Dovoli in poveži';
 $lang['provider_attendants_number'] = 'Število udeležencev pri tem ponudniku';
 $lang['provider_attendants_number_hint'] = 'Število ob ponudniku za tega ponudnika nadomesti število udeležencev storitve. Pustite prazno, če želite uporabiti vrednost storitve.';
+$lang['free_places'] = 'Prosta mesta';
+$lang['display_free_places_hint'] = 'Vsak termin na strani za rezervacijo prikaže, koliko mest je še prostih, pri storitvah z več kot enim udeležencem.';
+$lang['free_places_count'] = '{$places} prostih';
 // End

@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'This server is on a private network. Con
 $lang['caldav_allow_host_and_connect'] = 'Allow and connect';
 $lang['provider_attendants_number'] = 'Attendants number of this provider';
 $lang['provider_attendants_number_hint'] = 'The number next to a provider replaces the attendants number of the service for that provider. Leave it empty to use the value of the service.';
+$lang['free_places'] = 'Free Places';
+$lang['display_free_places_hint'] = 'Each time slot on the booking page shows how many places are still free, for services that accept more than one attendant.';
+$lang['free_places_count'] = '{$places} free';
 // End

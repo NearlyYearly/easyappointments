@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Ky server ndodhet në një rrjet privat.
 $lang['caldav_allow_host_and_connect'] = 'Lejo dhe lidhu';
 $lang['provider_attendants_number'] = 'Numri i pjesëmarrësve për këtë ofrues';
 $lang['provider_attendants_number_hint'] = 'Numri pranë një ofruesi zëvendëson numrin e pjesëmarrësve të shërbimit për atë ofrues. Lëreni bosh për të përdorur vlerën e shërbimit.';
+$lang['free_places'] = 'Vende të lira';
+$lang['display_free_places_hint'] = 'Çdo orar në faqen e rezervimit tregon sa vende janë ende të lira, për shërbimet që pranojnë më shumë se një pjesëmarrës.';
+$lang['free_places_count'] = '{$places} të lira';
 // End

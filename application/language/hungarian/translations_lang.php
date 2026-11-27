@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Ez a kiszolgáló magánhálózaton tal�
 $lang['caldav_allow_host_and_connect'] = 'Engedélyezés és csatlakozás';
 $lang['provider_attendants_number'] = 'A szolgáltató résztvevőinek száma';
 $lang['provider_attendants_number_hint'] = 'A szolgáltató melletti szám az adott szolgáltatónál felülírja a szolgáltatás résztvevőinek számát. Hagyja üresen a szolgáltatás értékének használatához.';
+$lang['free_places'] = 'Szabad helyek';
+$lang['display_free_places_hint'] = 'A foglalási oldal minden időpontja mutatja, hány hely szabad még, a több résztvevős szolgáltatásoknál.';
+$lang['free_places_count'] = '{$places} szabad';
 // End

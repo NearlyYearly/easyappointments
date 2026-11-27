@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Tento server je v privátní síti. Při
 $lang['caldav_allow_host_and_connect'] = 'Povolit a připojit';
 $lang['provider_attendants_number'] = 'Počet účastníků tohoto poskytovatele';
 $lang['provider_attendants_number_hint'] = 'Číslo vedle poskytovatele nahrazuje pro tohoto poskytovatele počet účastníků služby. Ponechte prázdné, chcete-li použít hodnotu služby.';
+$lang['free_places'] = 'Volná místa';
+$lang['display_free_places_hint'] = 'Každý časový termín na stránce rezervace ukazuje, kolik míst je ještě volných, u služeb pro více než jednoho účastníka.';
+$lang['free_places_count'] = '{$places} volných';
 // End

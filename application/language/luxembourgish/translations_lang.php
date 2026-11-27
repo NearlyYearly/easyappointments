@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Dëse Server ass an engem private Netz. 
 $lang['caldav_allow_host_and_connect'] = 'Zouloossen a verbannen';
 $lang['provider_attendants_number'] = 'Zuel vun den Assistenter vun dësem Mataarbechter';
 $lang['provider_attendants_number_hint'] = 'D\'Zuel nieft engem Mataarbechter ersetzt fir dëse Mataarbechter d\'Zuel vun den Assistenter vun der Dingschtleeschtung. Eidel loossen, fir de Wäert vun der Dingschtleeschtung ze benotzen.';
+$lang['free_places'] = 'Fräi Plazen';
+$lang['display_free_places_hint'] = 'All Zäitpunkt op der Buchungssäit weist, wéi vill Plaze nach fräi sinn, bei Servicer mat méi wéi engem Participant.';
+$lang['free_places_count'] = '{$places} fräi';
 // End

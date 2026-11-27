@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Deze server staat in een privénetwerk. 
 $lang['caldav_allow_host_and_connect'] = 'Toestaan en verbinden';
 $lang['provider_attendants_number'] = 'Aantal deelnemers van deze medewerker';
 $lang['provider_attendants_number_hint'] = 'Het getal naast een medewerker vervangt voor die medewerker het aantal deelnemers van de dienst. Laat leeg om de waarde van de dienst te gebruiken.';
+$lang['free_places'] = 'Vrije plaatsen';
+$lang['display_free_places_hint'] = 'Elk tijdslot op de boekingspagina toont hoeveel plaatsen nog vrij zijn, voor diensten met meer dan één deelnemer.';
+$lang['free_places_count'] = '{$places} vrij';
 // End

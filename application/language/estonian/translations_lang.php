@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'See server asub privaatvõrgus. Ühendam
 $lang['caldav_allow_host_and_connect'] = 'Luba ja ühenda';
 $lang['provider_attendants_number'] = 'Selle teenusepakkuja üheaegsete broneeringute arv';
 $lang['provider_attendants_number_hint'] = 'Teenusepakkuja kõrval olev arv asendab selle teenusepakkuja puhul teenuse üheaegsete broneeringute arvu. Teenuse väärtuse kasutamiseks jätke tühjaks.';
+$lang['free_places'] = 'Vabad kohad';
+$lang['display_free_places_hint'] = 'Iga ajapilu broneerimislehel näitab, mitu kohta on veel vaba, teenuste puhul, mis lubavad rohkem kui ühte osalejat.';
+$lang['free_places_count'] = '{$places} vaba';
 // End

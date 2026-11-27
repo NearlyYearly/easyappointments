@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Šis serveris atrodas privātā tīklā.
 $lang['caldav_allow_host_and_connect'] = 'Atļaut un pieslēgties';
 $lang['provider_attendants_number'] = 'Šī pakalpojumu sniedzēja apmeklētāju skaits';
 $lang['provider_attendants_number_hint'] = 'Skaitlis blakus pakalpojumu sniedzējam šim sniedzējam aizstāj pakalpojuma apmeklētāju skaitu. Atstājiet tukšu, lai izmantotu pakalpojuma vērtību.';
+$lang['free_places'] = 'Brīvās vietas';
+$lang['display_free_places_hint'] = 'Katrs laiks rezervācijas lapā parāda, cik vietu vēl ir brīvas, pakalpojumiem ar vairāk nekā vienu dalībnieku.';
+$lang['free_places_count'] = '{$places} brīvas';
 // End

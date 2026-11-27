@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Dieser Server befindet sich in einem pri
 $lang['caldav_allow_host_and_connect'] = 'Zulassen und verbinden';
 $lang['provider_attendants_number'] = 'Teilnehmerzahl dieses Anbieters';
 $lang['provider_attendants_number_hint'] = 'Die Zahl neben einem Anbieter ersetzt für diesen Anbieter die Teilnehmerzahl der Dienstleistung. Leer lassen, um den Wert der Dienstleistung zu verwenden.';
+$lang['free_places'] = 'Freie Plätze';
+$lang['display_free_places_hint'] = 'Jeder Zeitpunkt auf der Buchungsseite zeigt, wie viele Plätze noch frei sind, bei Dienstleistungen mit mehr als einem Teilnehmer.';
+$lang['free_places_count'] = '{$places} frei';
 // End

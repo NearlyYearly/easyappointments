@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'हा सर्व्हर खाज�
 $lang['caldav_allow_host_and_connect'] = 'परवानगी द्या आणि जोडा';
 $lang['provider_attendants_number'] = 'या व्यवस्थापकाचा उपस्थिती क्रमांक';
 $lang['provider_attendants_number_hint'] = 'व्यवस्थापकाच्या शेजारील संख्या त्या व्यवस्थापकासाठी सेवेच्या उपस्थिती क्रमांकाची जागा घेते. सेवेचे मूल्य वापरण्यासाठी रिकामे ठेवा.';
+$lang['free_places'] = 'रिक्त जागा';
+$lang['display_free_places_hint'] = 'एकापेक्षा जास्त सहभागी असलेल्या सेवांसाठी, बुकिंग पृष्ठावरील प्रत्येक वेळ किती जागा अजून रिक्त आहेत ते दाखवते.';
+$lang['free_places_count'] = '{$places} रिक्त';
 // End

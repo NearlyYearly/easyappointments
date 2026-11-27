@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Questo server si trova in una rete priva
 $lang['caldav_allow_host_and_connect'] = 'Consenti e connetti';
 $lang['provider_attendants_number'] = 'Numero di partecipanti di questo fornitore';
 $lang['provider_attendants_number_hint'] = 'Il numero accanto a un fornitore sostituisce, per quel fornitore, il numero di partecipanti del servizio. Lascia vuoto per usare il valore del servizio.';
+$lang['free_places'] = 'Posti liberi';
+$lang['display_free_places_hint'] = 'Ogni fascia oraria della pagina di prenotazione mostra quanti posti sono ancora liberi, per i servizi che accettano più di un partecipante.';
+$lang['free_places_count'] = '{$places} liberi';
 // End

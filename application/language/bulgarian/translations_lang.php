@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Този сървър е в частна
 $lang['caldav_allow_host_and_connect'] = 'Разреши и свържи';
 $lang['provider_attendants_number'] = 'Брой посетители за този изпълнител';
 $lang['provider_attendants_number_hint'] = 'Числото до изпълнител заменя броя посетители на услугата за този изпълнител. Оставете празно, за да се използва стойността на услугата.';
+$lang['free_places'] = 'Свободни места';
+$lang['display_free_places_hint'] = 'Всеки час на страницата за резервации показва колко места са все още свободни, за услуги с повече от един участник.';
+$lang['free_places_count'] = '{$places} свободни';
 // End

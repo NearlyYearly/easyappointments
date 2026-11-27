@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Ten serwer znajduje się w sieci prywatn
 $lang['caldav_allow_host_and_connect'] = 'Zezwól i połącz';
 $lang['provider_attendants_number'] = 'Liczba uczestników dla tej osoby z personelu';
 $lang['provider_attendants_number_hint'] = 'Liczba obok osoby z personelu zastępuje dla niej liczbę uczestników zabiegu. Pozostaw puste, aby użyć wartości zabiegu.';
+$lang['free_places'] = 'Wolne miejsca';
+$lang['display_free_places_hint'] = 'Każdy termin na stronie rezerwacji pokazuje, ile miejsc jest jeszcze wolnych, dla usług z więcej niż jednym uczestnikiem.';
+$lang['free_places_count'] = '{$places} wolne';
 // End

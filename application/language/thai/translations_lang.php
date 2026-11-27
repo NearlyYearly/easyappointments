@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'เซิร์ฟเวอร์นี�
 $lang['caldav_allow_host_and_connect'] = 'อนุญาตและเชื่อมต่อ';
 $lang['provider_attendants_number'] = 'จำนวนผู้เข้าร่วมของผู้ให้บริการรายนี้';
 $lang['provider_attendants_number_hint'] = 'ตัวเลขข้างผู้ให้บริการจะใช้แทนจำนวนผู้เข้าร่วมของบริการสำหรับผู้ให้บริการรายนั้น เว้นว่างไว้เพื่อใช้ค่าของบริการ';
+$lang['free_places'] = 'ที่ว่าง';
+$lang['display_free_places_hint'] = 'สำหรับบริการที่รับผู้เข้าร่วมได้มากกว่าหนึ่งคน แต่ละช่วงเวลาในหน้าจองจะแสดงจำนวนที่ว่างที่เหลืออยู่';
+$lang['free_places_count'] = 'ว่าง {$places}';
 // End

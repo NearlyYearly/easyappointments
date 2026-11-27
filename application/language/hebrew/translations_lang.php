@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'שרת זה נמצא ברשת פרטית
 $lang['caldav_allow_host_and_connect'] = 'אפשר והתחבר';
 $lang['provider_attendants_number'] = 'מספר המשתתפים של ספק זה';
 $lang['provider_attendants_number_hint'] = 'המספר שליד ספק מחליף עבור אותו ספק את מספר המשתתפים של השירות. השאירו ריק כדי להשתמש בערך של השירות.';
+$lang['free_places'] = 'מקומות פנויים';
+$lang['display_free_places_hint'] = 'כל משבצת זמן בדף ההזמנה מציגה כמה מקומות עדיין פנויים, עבור שירותים שמקבלים יותר ממשתתף אחד.';
+$lang['free_places_count'] = '{$places} פנויים';
 // End

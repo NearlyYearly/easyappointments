@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Den här servern finns i ett privat nät
 $lang['caldav_allow_host_and_connect'] = 'Tillåt och anslut';
 $lang['provider_attendants_number'] = 'Max antal deltagare för den här utföraren';
 $lang['provider_attendants_number_hint'] = 'Talet bredvid en utförare ersätter tjänstens max antal deltagare för den utföraren. Lämna tomt för att använda tjänstens värde.';
+$lang['free_places'] = 'Lediga platser';
+$lang['display_free_places_hint'] = 'Varje tid på bokningssidan visar hur många platser som fortfarande är lediga, för tjänster med fler än en deltagare.';
+$lang['free_places_count'] = '{$places} lediga';
 // End

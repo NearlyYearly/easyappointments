@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Ce serveur se trouve sur un réseau priv
 $lang['caldav_allow_host_and_connect'] = 'Autoriser et se connecter';
 $lang['provider_attendants_number'] = 'Nombre de participants de cet exécutant';
 $lang['provider_attendants_number_hint'] = 'Le nombre indiqué à côté d\'un exécutant remplace, pour cet exécutant, le nombre de participants de la prestation. Laissez vide pour utiliser la valeur de la prestation.';
+$lang['free_places'] = 'Places libres';
+$lang['display_free_places_hint'] = 'Chaque créneau de la page de réservation indique le nombre de places encore libres, pour les services acceptant plus d\'un participant.';
+$lang['free_places_count'] = '{$places} libres';
 // End

@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Ovaj poslužitelj je u privatnoj mreži.
 $lang['caldav_allow_host_and_connect'] = 'Dopusti i poveži';
 $lang['provider_attendants_number'] = 'Broj prisutnih za ovog pružatelja';
 $lang['provider_attendants_number_hint'] = 'Broj pokraj pružatelja zamjenjuje broj prisutnih usluge za tog pružatelja. Ostavite prazno za korištenje vrijednosti usluge.';
+$lang['free_places'] = 'Slobodna mjesta';
+$lang['display_free_places_hint'] = 'Svaki termin na stranici za rezervaciju prikazuje koliko je mjesta još slobodno, za usluge koje primaju više od jednog sudionika.';
+$lang['free_places_count'] = '{$places} slobodno';
 // End

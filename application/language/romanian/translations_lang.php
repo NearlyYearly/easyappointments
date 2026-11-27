@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Acest server se află într-o rețea pri
 $lang['caldav_allow_host_and_connect'] = 'Permite și conectează';
 $lang['provider_attendants_number'] = 'Număr asistenți pentru acest furnizor';
 $lang['provider_attendants_number_hint'] = 'Numărul de lângă un furnizor înlocuiește, pentru acel furnizor, numărul de asistenți al serviciului. Lăsați gol pentru a folosi valoarea serviciului.';
+$lang['free_places'] = 'Locuri libere';
+$lang['display_free_places_hint'] = 'Fiecare interval orar de pe pagina de rezervare arată câte locuri mai sunt libere, pentru serviciile cu mai mult de un participant.';
+$lang['free_places_count'] = '{$places} libere';
 // End

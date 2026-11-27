@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Bu sunucu özel bir ağda bulunuyor. Ba�
 $lang['caldav_allow_host_and_connect'] = 'İzin ver ve bağlan';
 $lang['provider_attendants_number'] = 'Bu hizmet sağlayıcının refakatçi sayısı';
 $lang['provider_attendants_number_hint'] = 'Bir hizmet sağlayıcının yanındaki sayı, o hizmet sağlayıcı için hizmetin refakatçi sayısının yerini alır. Hizmetin değerini kullanmak için boş bırakın.';
+$lang['free_places'] = 'Boş yerler';
+$lang['display_free_places_hint'] = 'Birden fazla katılımcı kabul eden hizmetlerde, rezervasyon sayfasındaki her saat kaç yerin hâlâ boş olduğunu gösterir.';
+$lang['free_places_count'] = '{$places} boş';
 // End

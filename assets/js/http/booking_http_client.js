@@ -74,14 +74,18 @@ App.Http.Booking = (function () {
             manage_mode: Number(vars('manage_mode') || 0),
             appointment_id: appointmentId,
             appointment_hash: vars('manage_mode') ? vars('appointment_data').hash : null,
+            with_free_places: Number(Boolean(Number(vars('display_free_places')))),
         };
 
         $.post(url, data).done((response) => {
             $availableHours.empty();
 
-            // The response contains the available hours for the selected provider and service. Fill the available
-            // hours div with response data.
-            if (response.length > 0) {
+            // The response contains the available hours for the selected provider and service, either as a list or,
+            // when the free places are displayed, as an object of free places keyed by the hour.
+            const freePlaces = Array.isArray(response) ? {} : response;
+            const availableHours = Array.isArray(response) ? response : Object.keys(response);
+
+            if (availableHours.length > 0) {
                 let providerId = $selectProvider.val();
 
                 if (providerId === 'any-provider') {
@@ -105,7 +109,7 @@ App.Http.Booking = (function () {
                 const selectedTimezone = $('#select-timezone').val();
                 const timeFormat = vars('time_format') === 'regular' ? 'h:mm a' : 'HH:mm';
 
-                response.forEach((availableHour) => {
+                availableHours.forEach((availableHour) => {
                     const availableHourMoment = moment
                         .tz(selectedDate + ' ' + availableHour + ':00', providerTimezone)
                         .tz(selectedTimezone);
@@ -114,15 +118,23 @@ App.Http.Booking = (function () {
                         return; // Due to the selected timezone the available hour belongs to another date.
                     }
 
-                    $availableHours.append(
-                        $('<button/>', {
-                            'class': 'btn btn-outline-secondary w-100 shadow-none available-hour',
-                            'data': {
-                                'value': availableHour,
-                            },
-                            'text': availableHourMoment.format(timeFormat),
-                        }),
-                    );
+                    const $availableHour = $('<button/>', {
+                        'class': 'btn btn-outline-secondary w-100 shadow-none available-hour',
+                        'data': {
+                            'value': availableHour,
+                        },
+                        'text': availableHourMoment.format(timeFormat),
+                    });
+
+                    // Null for services that take a single attendant, where the badge would always say 1.
+                    if (freePlaces[availableHour] != null) {
+                        $('<span/>', {
+                            'class': 'badge rounded-pill text-bg-light border ms-2 free-places',
+                            'text': lang('free_places_count').replace('{$places}', freePlaces[availableHour]),
+                        }).appendTo($availableHour);
+                    }
+
+                    $availableHours.append($availableHour);
                 });
 
                 if (App.Pages.Booking.manageMode) {

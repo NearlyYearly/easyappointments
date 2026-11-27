@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'यह सर्वर एक निज�
 $lang['caldav_allow_host_and_connect'] = 'अनुमति दें और कनेक्ट करें';
 $lang['provider_attendants_number'] = 'इस प्रबन्धक के अटेंडेंट्स की संख्या';
 $lang['provider_attendants_number_hint'] = 'प्रबन्धक के पास लिखी संख्या उस प्रबन्धक के लिए सेवा के अटेंडेंट्स की संख्या की जगह लेती है। सेवा का मान उपयोग करने के लिए इसे खाली छोड़ दें।';
+$lang['free_places'] = 'खाली स्थान';
+$lang['display_free_places_hint'] = 'एक से अधिक प्रतिभागियों वाली सेवाओं के लिए, बुकिंग पेज पर हर समय स्लॉट दिखाता है कि कितने स्थान अभी खाली हैं।';
+$lang['free_places_count'] = '{$places} खाली';
 // End

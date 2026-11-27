@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Este servidor está numa rede privada. A
 $lang['caldav_allow_host_and_connect'] = 'Permitir e ligar';
 $lang['provider_attendants_number'] = 'Número de participantes deste fornecedor';
 $lang['provider_attendants_number_hint'] = 'O número junto a um fornecedor substitui, para esse fornecedor, o número de participantes do serviço. Deixe vazio para utilizar o valor do serviço.';
+$lang['free_places'] = 'Lugares livres';
+$lang['display_free_places_hint'] = 'Cada horário na página de marcação mostra quantos lugares ainda estão livres, para serviços que aceitam mais de um participante.';
+$lang['free_places_count'] = '{$places} livres';
 // End

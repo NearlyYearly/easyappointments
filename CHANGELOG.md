@@ -8,6 +8,7 @@ developers to maintain and readjust their custom modifications on the main proje
 ### Added
 
 - The attendants number of a service can now be set differently for each provider on the services page and through the providerAttendantsNumbers field of the services API (#371)
+- The booking page can show how many places are still free next to each time slot of a service that accepts more than one attendant; turn it on with the new Free Places option in the booking settings
 
 ### Fixed
 

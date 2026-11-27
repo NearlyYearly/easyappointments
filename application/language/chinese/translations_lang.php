@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = '此服务器位于专用网络中。连�
 $lang['caldav_allow_host_and_connect'] = '允许并连接';
 $lang['provider_attendants_number'] = '该服务人员的出席人数';
 $lang['provider_attendants_number_hint'] = '服务人员旁边的数字将替代服务项目对该服务人员的出席人数。留空则使用服务项目的值。';
+$lang['free_places'] = '剩余名额';
+$lang['display_free_places_hint'] = '对于可接受多名参与者的服务，预约页面上的每个时间段都会显示剩余名额。';
+$lang['free_places_count'] = '剩余 {$places}';
 // End

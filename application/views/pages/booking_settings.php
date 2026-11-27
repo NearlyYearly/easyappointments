@@ -363,6 +363,22 @@
 
                                     <div class="mb-3">
                                         <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="display-free-places"
+                                                   data-field="display_free_places">
+                                            <label class="form-check-label" for="display-free-places">
+                                                <?= lang('free_places') ?>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-text text-muted">
+                                            <small>
+                                                <?= lang('display_free_places_hint') ?>
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <div class="form-check form-switch">
                                             <input class="form-check-input" type="checkbox" id="display-login-button"
                                                    data-field="display_login_button">
                                             <label class="form-check-label" for="display-login-button">

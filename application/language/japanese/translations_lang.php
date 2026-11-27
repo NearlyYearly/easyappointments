@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'このサーバーはプライベート�
 $lang['caldav_allow_host_and_connect'] = '許可して接続';
 $lang['provider_attendants_number'] = 'この担当者の出席者数';
 $lang['provider_attendants_number_hint'] = '担当者の横の数値は、その担当者についてメニューの出席者数を置き換えます。メニューの値を使用する場合は空欄のままにしてください。';
+$lang['free_places'] = '空き枠';
+$lang['display_free_places_hint'] = '複数の参加者を受け付けるサービスでは、予約ページの各時間枠に残りの空き枠数が表示されます。';
+$lang['free_places_count'] = '残り {$places}';
 // End

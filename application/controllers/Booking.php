@@ -289,6 +289,7 @@ class Booking extends EA_Controller
             'first_weekday' => $first_weekday,
             'display_cookie_notice' => $display_cookie_notice,
             'display_any_provider' => setting('display_any_provider'),
+            'display_free_places' => setting('display_free_places'),
             'future_booking_limit' => setting('future_booking_limit'),
             'appointment_data' => $appointment,
             'provider_data' => $provider ? filter_sensitive_user_data($provider) : null,
@@ -825,6 +826,7 @@ class Booking extends EA_Controller
             check('manage_mode', 'bool|null');
             check('appointment_id', 'numeric|null');
             check('appointment_hash', 'string|null');
+            check('with_free_places', 'bool|null');
 
             $provider_id = request('provider_id');
             $service_id = request('service_id');
@@ -850,41 +852,46 @@ class Booking extends EA_Controller
 
             $service = $this->services_model->find($service_id);
 
-            if ($provider_id === ANY_PROVIDER) {
-                $providers = $this->providers_model->get_available_providers(true);
+            $providers =
+                $provider_id === ANY_PROVIDER
+                    ? array_filter(
+                        $this->providers_model->get_available_providers(true),
+                        fn($provider) => in_array($service_id, $provider['services']),
+                    )
+                    : [$this->providers_model->find($provider_id)];
 
-                $available_hours = [];
+            // Free places per hour, summed over the providers. Null where no provider takes more than one attendant,
+            // since a badge would only ever say "1" there.
+            $places = [];
+            $group_hours = [];
 
-                foreach ($providers as $provider) {
-                    if (!in_array($service_id, $provider['services'])) {
-                        continue;
-                    }
-
-                    $provider_available_hours = $this->availability->get_available_hours(
-                        $selected_date,
-                        $service,
-                        $provider,
-                        $exclude_appointment_id,
-                    );
-
-                    $available_hours = array_merge($available_hours, $provider_available_hours);
-                }
-
-                $available_hours = array_unique(array_values($available_hours));
-
-                sort($available_hours);
-
-                $response = $available_hours;
-            } else {
-                $provider = $this->providers_model->find($provider_id);
-
-                $response = $this->availability->get_available_hours(
+            foreach ($providers as $provider) {
+                $provider_places = $this->availability->get_available_places(
                     $selected_date,
                     $service,
                     $provider,
                     $exclude_appointment_id,
                 );
+
+                $capacity = $this->services_model->get_attendants_number_for_provider($service, (int) $provider['id']);
+
+                foreach ($provider_places as $hour => $free) {
+                    $places[$hour] = ($places[$hour] ?? 0) + $free;
+
+                    if ($capacity > 1) {
+                        $group_hours[$hour] = true;
+                    }
+                }
             }
+
+            foreach ($places as $hour => $free) {
+                $places[$hour] = isset($group_hours[$hour]) ? $free : null;
+            }
+
+            ksort($places, SORT_STRING);
+
+            // The booking page asks for the free places only when it displays them, every other caller gets the hours.
+            $response = request('with_free_places') && setting('display_free_places') ? $places : array_keys($places);
 
             json_response($response);
         } catch (Throwable $e) {

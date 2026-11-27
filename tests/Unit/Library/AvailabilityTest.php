@@ -298,4 +298,23 @@ class AvailabilityTest extends TestCase
         // The provider only accepts 6 attendants, although the service is set to 10.
         $this->assertSame(['09:00'], $result);
     }
+
+    public function testGetAvailablePlacesCountsTheFreePlacesOfEachHour(): void
+    {
+        $availability = $this->availability_with_models(['09:00' => 7, '10:00' => 10]);
+
+        $result = $availability->get_available_places($this->tomorrow(), $this->group_service(10), $this->provider());
+
+        // 10:00 is fully booked and left out, as in get_available_hours().
+        $this->assertSame(['09:00' => 3], $result);
+    }
+
+    public function testGetAvailablePlacesUsesTheAttendantsNumberOfTheProvider(): void
+    {
+        $availability = $this->availability_with_models(['09:00' => 4], 6);
+
+        $result = $availability->get_available_places($this->tomorrow(), $this->group_service(10), $this->provider());
+
+        $this->assertSame(['09:00' => 2, '10:00' => 6], $result);
+    }
 }

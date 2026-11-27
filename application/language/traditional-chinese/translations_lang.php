@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = '此伺服器位於私人網路中。連�
 $lang['caldav_allow_host_and_connect'] = '允許並連線';
 $lang['provider_attendants_number'] = '此提供者的參加人數';
 $lang['provider_attendants_number_hint'] = '提供者旁邊的數字會取代服務對該提供者的參加人數。留空則使用服務的值。';
+$lang['free_places'] = '剩餘名額';
+$lang['display_free_places_hint'] = '對於可接受多名參與者的服務，預約頁面上的每個時段都會顯示剩餘名額。';
+$lang['free_places_count'] = '剩餘 {$places}';
 // End

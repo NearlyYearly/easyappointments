@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Этот сервер находится
 $lang['caldav_allow_host_and_connect'] = 'Разрешить и подключиться';
 $lang['provider_attendants_number'] = 'Количество участников для этого исполнителя';
 $lang['provider_attendants_number_hint'] = 'Число рядом с исполнителем заменяет для него количество участников, заданное для услуги. Оставьте пустым, чтобы использовать значение услуги.';
+$lang['free_places'] = 'Свободные места';
+$lang['display_free_places_hint'] = 'Для услуг с несколькими участниками каждое время на странице бронирования показывает, сколько мест ещё свободно.';
+$lang['free_places_count'] = '{$places} свободно';
 // End

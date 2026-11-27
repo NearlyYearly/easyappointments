@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'هذا الخادم على شبكة خا
 $lang['caldav_allow_host_and_connect'] = 'السماح والاتصال';
 $lang['provider_attendants_number'] = 'عدد الحاضرين لهذا المزود';
 $lang['provider_attendants_number_hint'] = 'الرقم بجانب المزود يستبدل عدد الحاضرين الخاص بالخدمة لذلك المزود. اتركه فارغاً لاستخدام قيمة الخدمة.';
+$lang['free_places'] = 'الأماكن المتاحة';
+$lang['display_free_places_hint'] = 'يعرض كل موعد في صفحة الحجز عدد الأماكن التي لا تزال متاحة، للخدمات التي تقبل أكثر من مشارك واحد.';
+$lang['free_places_count'] = '{$places} متاح';
 // End

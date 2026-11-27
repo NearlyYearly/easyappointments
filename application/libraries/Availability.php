@@ -65,6 +65,29 @@ class Availability
         array $provider,
         int|string|null $exclude_appointment_id = null,
     ): array {
+        return array_keys($this->get_available_places($date, $service, $provider, $exclude_appointment_id));
+    }
+
+    /**
+     * Get the available hours of a date together with the number of places that are still free at each of them.
+     *
+     * A service with a single attendant has one free place at every available hour.
+     *
+     * @param string $date Selected date (Y-m-d).
+     * @param array $service Service data.
+     * @param array $provider Provider data.
+     * @param int|string|null $exclude_appointment_id Exclude an appointment from the availability generation.
+     *
+     * @return array Free places keyed by the available hour (H:i), sorted by the hour.
+     *
+     * @throws Exception
+     */
+    public function get_available_places(
+        string $date,
+        array $service,
+        array $provider,
+        int|string|null $exclude_appointment_id = null,
+    ): array {
         $exclude_appointment_id =
             $exclude_appointment_id !== null && $exclude_appointment_id !== '' ? (int) $exclude_appointment_id : null;
 
@@ -76,7 +99,7 @@ class Availability
         $capacity = $this->CI->services_model->get_attendants_number_for_provider($service, (int) $provider['id']);
 
         if ($capacity > 1) {
-            $available_hours = $this->consider_multiple_attendants(
+            $available_places = $this->consider_multiple_attendants(
                 $date,
                 $service,
                 $provider,
@@ -86,12 +109,24 @@ class Availability
         } else {
             $available_periods = $this->get_available_periods($date, $provider, $exclude_appointment_id);
 
-            $available_hours = $this->generate_available_hours($date, $service, $available_periods);
+            $available_places = array_fill_keys(
+                $this->generate_available_hours($date, $service, $available_periods),
+                1,
+            );
         }
 
-        $available_hours = $this->consider_book_advance_timeout($date, $available_hours, $provider);
+        $available_hours = $this->consider_book_advance_timeout($date, array_keys($available_places), $provider);
 
-        return $this->consider_future_booking_limit($date, $available_hours, $provider);
+        $available_hours = $this->consider_future_booking_limit($date, $available_hours, $provider);
+
+        // Both filters return the remaining hours sorted, which keeps the places in the order of the hours.
+        $places = [];
+
+        foreach ($available_hours as $available_hour) {
+            $places[$available_hour] = $available_places[$available_hour];
+        }
+
+        return $places;
     }
 
     /**
@@ -105,7 +140,7 @@ class Availability
      * @param int|null $exclude_appointment_id Exclude an appointment from the availability generation.
      * @param int|null $capacity Number of attendants a slot accepts, defaults to the attendants number of the service.
      *
-     * @return array Returns the available hours array.
+     * @return array Returns the free places keyed by the available hour (H:i).
      *
      * @throws Exception
      */
@@ -192,7 +227,7 @@ class Availability
                 );
 
                 if ($appointment_attendants_number < $capacity) {
-                    $hours[] = $slot_start->format('H:i');
+                    $hours[$slot_start->format('H:i')] = $capacity - $appointment_attendants_number;
                 }
 
                 $slot_start->add($interval);

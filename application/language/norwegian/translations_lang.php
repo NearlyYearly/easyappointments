@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Denne serveren er i et privat nettverk. 
 $lang['caldav_allow_host_and_connect'] = 'Tillat og koble til';
 $lang['provider_attendants_number'] = 'Antall deltakere for denne leverandøren';
 $lang['provider_attendants_number_hint'] = 'Tallet ved siden av en leverandør erstatter tjenestens antall deltakere for denne leverandøren. La feltet stå tomt for å bruke tjenestens verdi.';
+$lang['free_places'] = 'Ledige plasser';
+$lang['display_free_places_hint'] = 'Hvert tidspunkt på bestillingssiden viser hvor mange plasser som fortsatt er ledige, for tjenester med mer enn én deltaker.';
+$lang['free_places_count'] = '{$places} ledige';
 // End

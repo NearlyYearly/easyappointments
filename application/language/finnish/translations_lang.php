@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Tämä palvelin on yksityisessä verkoss
 $lang['caldav_allow_host_and_connect'] = 'Salli ja yhdistä';
 $lang['provider_attendants_number'] = 'Tämän palveluntuottajan osallistujien määrä';
 $lang['provider_attendants_number_hint'] = 'Palveluntuottajan vieressä oleva luku korvaa palvelun osallistujien määrän kyseisen palveluntuottajan osalta. Jätä tyhjäksi, jos haluat käyttää palvelun arvoa.';
+$lang['free_places'] = 'Vapaat paikat';
+$lang['display_free_places_hint'] = 'Jokainen ajankohta varaussivulla näyttää, montako paikkaa on vielä vapaana, palveluissa joihin mahtuu useampi kuin yksi osallistuja.';
+$lang['free_places_count'] = '{$places} vapaana';
 // End

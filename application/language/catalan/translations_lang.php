@@ -593,4 +593,7 @@ $lang['caldav_private_host_warning'] = 'Aquest servidor es troba en una xarxa pr
 $lang['caldav_allow_host_and_connect'] = 'Permet i connecta';
 $lang['provider_attendants_number'] = 'Nombre d\'assistents d\'aquest proveïdor';
 $lang['provider_attendants_number_hint'] = 'El nombre al costat d\'un proveïdor substitueix el nombre d\'assistents del servei per a aquest proveïdor. Deixeu-lo buit per utilitzar el valor del servei.';
+$lang['free_places'] = 'Places lliures';
+$lang['display_free_places_hint'] = 'Cada franja horària de la pàgina de reserva mostra quantes places queden lliures, per als serveis que admeten més d\'un assistent.';
+$lang['free_places_count'] = '{$places} lliures';
 // End
